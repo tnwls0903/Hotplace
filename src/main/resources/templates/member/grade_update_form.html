@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html layout:decorate="~{layout}"> <!-- layout.html 상속-->
+
+<div layout:fragment="content">
+  <script>
+    window.onload = () => {
+      document.getElementById('btn_send').addEventListener('click', send);
+            
+      document.querySelector('#current_grade').addEventListener('keypress', (event) => {
+        if(event.key === 'Enter') {
+          document.getElementById('grade').focus();
+        }
+      });
+      
+      document.querySelector('#grade').addEventListener('keypress', (event) => {
+        if(event.key === 'Enter') {
+          document.getElementById('btn_send').focus();
+        }
+      }); 
+      
+    }
+    
+    function send() {
+       // ---------------------------------------------------------------------------------------
+       // fetch 관련 시작
+       // ---------------------------------------------------------------------------------------
+        let url = './grade_check';
+        let current_grade = document.getElementById("current_grade").value;
+        let memberno = document.getElementById("memberno").value;
+    
+        fetch(url, {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json' // JSON 형식으로 데이터 전송을 알림
+            },
+            body: JSON.stringify({current_grade: current_grade}, {memberno: memberno}) // JSON 데이터를 문자열로 변환하여 요청 본문에 포함
+            })
+        .then(response => response.json())
+        .then(rdata => {
+          if (rdata.cnt == 0) { // 등급, 회원 불일치
+            current_grade_msg.innerHTML= '현재 등급 또이 일치하지 않습니다. 다시 입력하세요.';
+            current_grade_msg.classList.add('span_warning');
+            current_grade.focus();
+            return false;              
+          } else {
+            current_grade_msg.style.display = 'none'; // gif 종료
+            
+            if (document.getElementById('grade').value.trim().length == 0) {
+              alert('변경할 등급 값을 입력해주세요.');
+              document.getElementById('grade').focus();
+              return false;  // 등급 변경 진행 중지
+            }
+        
+            // 새로운 등급 입력 확인
+            let grade = document.getElementById('grade');
+            let grade_msg = document.getElementById('grade_msg');
+         
+            document.getElementById('frm').submit();            
+          }
+        })
+        .catch(error => { // 서버 다운등 통신 에러
+            console.error('Error:', error);
+        });      
+            
+        // 처리중 출력
+        current_grade_msg.innerHTML="<img src='/images/progress.gif' style='width: 10%;'>"; // static 기준
+
+       // ---------------------------------------------------------------------------------------
+       // fetch 관련 종료
+       // ---------------------------------------------------------------------------------------
+    }    
+  </script>
+
+  <div class="title_line">등급 변경 > <span th:text="@{|${memberVO.mname} (${memberVO.id})|}"></span></div>
+  <aside class="aside_right">
+    <a href="javascript:location.reload();">새로고침</a>
+    <span class='menu_divide' >│</span> 
+    <a href='./create'>회원 가입</a>
+    <span class='menu_divide' >│</span> 
+    <a href='./list'>목록</a>
+  </aside> 
+
+  <div class='menu_line'></div>
+  
+  <div style="width: 30%; margin: 0px auto ">
+    <form name="frm" id="frm" th:object="${memberVO}" method="post" 
+              action="/member/grade_update_proc">
+      <input type="hidden" name="memberno" th:value="${memberVO.memberno}">
+
+      <div class="form-group">
+        <label for="grade">변경하려는 회원 번호*</label> 
+        <input type='text' name='memberno' id='memberno' value='' required="required" 
+                  placeholder="memberno" autofocus="autofocus" 
+                  class="form-control form-control-sm" style="width: 100%;">
+         <div id='memberno_grade_msg' style='width: 100%; text-align: center;'></div>         
+      </div>
+
+      <div class="form-group">
+        <label for="grade">현재 회원 등급*</label> 
+        <input type='text' name='current_grade' id='current_grade' value='' required="required" 
+                  placeholder="등급" class="form-control form-control-sm" style="width: 100%;">
+         <div id='current_grade_msg' style='width: 100%; text-align: center;'></div>         
+      </div>
+      
+      <div class="form-group">
+        <label for="grade">변경할 회원 등급*</label> 
+        <input type='text' name='grade' id='grade' value='' required="required" 
+                  placeholder="등급" class="form-control form-control-sm" style="width: 100%;">
+        <span id='grade_msg'></span>
+      </div>
+      
+      <div class="content_body_bottom">
+        <button type="button" id='btn_send' class="btn btn-secondary btn-sm">저장</button>
+        <button type="button" onclick="history.back();" class="btn btn-secondary btn-sm">취소</button>
+      </div>
+
+
+    </form>
+  </div>
+    
+</div>
+</html>
+
