@@ -1,6 +1,55 @@
 <!DOCTYPE html>
 <html layout:decorate="~{layout}"> <!-- layout.html 상속 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  
+  <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $(".slider").bxSlider();
+      });
+    </script>
+ 
+</head>
+  
+<body>
   <div layout:fragment="content" style="width: 80%; margin: 50px auto; text-align: center;">
-    <img src="/images/main.jpg" style="width: 70%;"> <!-- /static/images/main.jpg -->
+    <a class="nav-link" href="/hotplace/list_search?word=서울"><p style="font-size: 27px; font-weight: bold;">"서울" 유명 장소 보러가기</p></a>
+   
+    <div class="bxslider" >
+      <div><img src="./images/k2.jpg"/></div>
+      <div><img src="./images/k2.jpg"/></div>
+    </div>
   </div>
+    <script>
+      var images = document.querySelectorAll('.bxslider img');
+
+      for (var i = 0; i < images.length; i++) {
+          var image = images[i];
+          var title = image.title;
+          image.title = 'DB 데이터 WORD 가져오기';
+      }
+
+      document.querySelector('img[src="./images/k2.jpg"]').addEventListener('click', function() {
+        window.location.href = 'https://www.songpa.go.kr/culture/detailInfo.do?resrceCd=TR0147-1000053&sc1=TR0147&rcpp=6&key=3822';
+        console.log('이미지가 클릭되었습니다.');
+      });
+
+      $(function(){
+    $('.bxslider').bxSlider({
+      mode: 'fade',
+      captions: true,
+      slideWidth: 600,
+      auto: true,
+      pause: 3000
+    });
+  });
+    </script>
+</body>
+  
 </html>
