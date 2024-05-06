@@ -65,6 +65,10 @@ public class MemberCont {
    */
   @GetMapping(value="/create") // http://localhost:9094/member/create
   public String create_form(Model model, MemberVO memberVO) {
+    
+    ArrayList<CategoryVOMenu> menu = this.categoryProcess.menu();
+    model.addAttribute("menu", menu);
+    
     return "member/create";    // /template/member/create.html
   }
   

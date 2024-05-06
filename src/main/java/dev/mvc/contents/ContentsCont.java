@@ -60,7 +60,7 @@ public class ContentsCont {
     return url; // /forward, /templates/...
   }
   
-  // 등록 폼, contents 테이블은 FK로 cateno를 사용함.
+  // 등록 폼, contents 테이블은 FK로 categoryno를 사용함.
   // http://localhost:9094/contents/create  X
   // http://localhost:9094/contents/create?categoryno=1  // categoryno 변수값을 보내는 목적
   // http://localhost:9094/contents/create?categoryno=2
@@ -206,8 +206,8 @@ public class ContentsCont {
    * http://localhost:9094/contents/list_by_categoryno?categoryno=5
    * @return
    */
-  @GetMapping(value="/list_by_cateno")
-  public String list_by_cateno_search_paging(HttpSession session, Model model, 
+  @GetMapping(value="/list_by_categoryno")
+  public String list_by_categoryno_search_paging(HttpSession session, Model model, 
                                                     int categoryno, 
                                                     @RequestParam(name="word", defaultValue = "") String word,
                                                     @RequestParam(name="now_page", defaultValue="1") int now_page) {
@@ -257,11 +257,11 @@ public class ContentsCont {
   /**
    * 목록 + 검색 + 페이징 지원 + Grid
    * 검색하지 않는 경우
-   * http://localhost:9094/contents/list_by_cateno_grid?categoryno=2&word=&now_page=1
+   * http://localhost:9094/contents/list_by_categoryno_grid?categoryno=2&word=&now_page=1
    * 검색하는 경우
-   * http://localhost:9094/contents/list_by_cateno_grid?categoryno=2&word=탐험&now_page=1
+   * http://localhost:9094/contents/list_by_categoryno_grid?categoryno=2&word=탐험&now_page=1
    * 
-   * @param cateno
+   * @param categoryno
    * @param word
    * @param now_page
    * @return
@@ -324,7 +324,7 @@ public class ContentsCont {
   public String read(Model model, 
                           int contentsno,
                           String word,
-                          int now_page) { // int cateno = (int)request.getParameter("cateno");
+                          int now_page) { // int categoryno = (int)request.getParameter("categoryno");
     ArrayList<CategoryVOMenu> menu = this.categoryProcess.menu();
     model.addAttribute("menu", menu);
     

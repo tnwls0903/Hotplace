@@ -103,7 +103,7 @@ public interface ContentsDAOInter {
   public int delete(int contentsno);
   
   /**
-   * FK cateno 값이 같은 레코드 갯수 산출
+   * FK categoryno 값이 같은 레코드 갯수 산출
    * @param categoryno
    * @return
    */

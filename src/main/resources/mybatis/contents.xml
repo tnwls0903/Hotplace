@@ -7,7 +7,7 @@
   <insert id="create" parameterType="dev.mvc.contents.ContentsVO">
     INSERT INTO contents(contentsno, memberno, categoryno, title, content, passwd, word,
                                      file1, file1saved, thumb1, size1, rdate)
-    VALUES(contents_seq.nextval, #{memberno}, #{cateno}, #{title}, #{content}, #{passwd}, #{word},
+    VALUES(contents_seq.nextval, #{memberno}, #{categoryno}, #{title}, #{content}, #{passwd}, #{word},
                 #{file1}, #{file1saved}, #{thumb1}, #{size1}, sysdate)
   </insert>
 
@@ -140,7 +140,7 @@
     WHERE contentsno=#{contentsno}
   </delete>
   
-  <!-- FK cateno 컬럼에 대응하는 필수 SQL -->
+  <!-- FK categoryno 컬럼에 대응하는 필수 SQL -->
   <!-- 특정 카테고리에 속한 레코드 갯수를 리턴 -->
   <select id="count_by_categoryno" resultType="int" parameterType="int">
     SELECT COUNT(*) as cnt 

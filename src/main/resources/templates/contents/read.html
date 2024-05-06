@@ -32,9 +32,9 @@
   <aside class="aside_right" th:if="${session.grade != 'admin'}">
      <a href="javascript:location.reload();">새로고침</a>
     <span class='menu_divide' >│</span>    
-    <a th:href="@{|./list_by_categoryno?cateno=${contentsVO.categoryno }&word=${word}&now_page=${now_page}|}">목록형</a>    
+    <a th:href="@{|./list_by_categoryno?categoryno=${contentsVO.categoryno }&word=${word}&now_page=${now_page}|}">목록형</a>    
     <span class='menu_divide' >│</span>
-    <a th:href="@{|./list_by_categoryno_grid?cateno=${categoryVO.categoryno}&word=${word}&now_page=${now_page}|}">갤러리형</a>
+    <a th:href="@{|./list_by_categoryno_grid?categoryno=${categoryVO.categoryno}&word=${word}&now_page=${now_page}|}">갤러리형</a>
   </aside> 
  
   <div class='menu_line'></div>

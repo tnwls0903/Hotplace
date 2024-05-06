@@ -143,9 +143,9 @@ public class ContentsProc implements ContentsProcInter {
 //  </style>
 //  
 //  <DIV id='paging'>
-//    <span class='span_box_1'><A href='list_by_cateno.do?word=&now_page=1&categoryno=4'>1</A></span>
+//    <span class='span_box_1'><A href='list_by_categoryno?word=&now_page=1&categoryno=4'>1</A></span>
 //  <span class='span_box_2'>2</span>
-//  <span class='span_box_1'><A href='list_by_cateno.do?word=&now_page=3&categoryno=4'>3</A></span>
+//  <span class='span_box_1'><A href='list_by_categoryno?word=&now_page=3&categoryno=4'>3</A></span>
 //    </DIV>
 //  </DIV> 
 //  <!-- 페이지 목록 출력 부분 종료 -->

@@ -23,6 +23,7 @@ public class Security {
   public Security() {
     try {
       String key = "rlatnwlsAES256235";    // key는 16자, 123 -> KUxUbf+4VrlpsFZ3tSAKdw==
+      
       this.iv = key.substring(0, 16);
    
       byte[] keyBytes = new byte[16];

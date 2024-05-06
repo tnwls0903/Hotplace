@@ -121,7 +121,7 @@ public class CategoryController {
   /**
    * 조회 + 목록
    * @param model
-   * @param cateno 조회할 카테고리 번호
+   * @param categoryno 조회할 카테고리 번호
    * @return
    */
   @GetMapping(value="/read/{categoryno}")

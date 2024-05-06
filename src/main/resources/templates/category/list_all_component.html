@@ -28,10 +28,10 @@
         <td class="td_bs">
           <span th:text="${categoryVO.seqno}" style="margin-right: 3px;"></span>          
           <span th:if="${categoryVO.visible == 'Y'}">
-            <a th:href="@{|/category/update_visible_n/${categoryVO.categoryno}?word=${word}&now_page=${now_page}|}"><img src="/category/images/show.png" class="icon" title="출력"></a> <!-- /static/cate/images/show.png -->
+            <a th:href="@{|/category/update_visible_n/${categoryVO.categoryno}?word=${word}&now_page=${now_page}|}"><img src="/category/images/show.png" class="icon" title="출력"></a> <!-- /static/category/images/show.png -->
           </span>
           <span th:unless="${categoryVO.visible == 'Y'}">
-            <a th:href="@{|/category/update_visible_y/${categoryVO.categoryno}?word=${word}&now_page=${now_page}|}"><img src="/category/images/hide.png" class="icon" title="숨김"></a> <!-- /static/cate/images/hide.png -->
+            <a th:href="@{|/category/update_visible_y/${categoryVO.categoryno}?word=${word}&now_page=${now_page}|}"><img src="/category/images/hide.png" class="icon" title="숨김"></a> <!-- /static/category/images/hide.png -->
           </span>          
           <a th:href="@{|/category/update_seqno_forward/${categoryVO.categoryno}?word=${word}&now_page=${now_page}|}"><img src="/category/images/decrease.png" class="icon"></a>
           <a th:href="@{|/category/update_seqno_backward/${categoryVO.categoryno}?word=${word}&now_page=${now_page}|}"><img src="/category/images/increase.png" class="icon"></a>
