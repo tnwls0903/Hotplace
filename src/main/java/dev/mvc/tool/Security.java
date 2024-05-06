@@ -22,7 +22,7 @@ public class Security {
   // 키 생성
   public Security() {
     try {
-      String key = "tnwlsAES256235";    // key는 16자, 123 -> KUxUbf+4VrlpsFZ3tSAKdw==
+      String key = "rlatnwlsAES256235";    // key는 16자, 123 -> KUxUbf+4VrlpsFZ3tSAKdw==
       this.iv = key.substring(0, 16);
    
       byte[] keyBytes = new byte[16];

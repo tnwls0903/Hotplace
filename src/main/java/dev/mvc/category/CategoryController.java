@@ -54,7 +54,7 @@ public class CategoryController {
    * @param bindingResult
    * @return
    */
-  @PostMapping(value="/create") // http://localhost:9094/cate/create
+  @PostMapping(value="/create") // http://localhost:9094/category/create
   public String create(Model model, @Valid CategoryVO categoryVO, BindingResult bindingResult, 
       @RequestParam(name="word", defaultValue="") String word,
       @RequestParam(name="now_page", defaultValue="1") int now_page) {
@@ -241,7 +241,7 @@ public class CategoryController {
         return "redirect:/category/update/" + categoryVO.getCategoryno() + "?word=" + Tool.encode(word) + "&now_page=" + now_page;
       } else {
         model.addAttribute("code", "update_fail");
-        return "cate/msg"; // /templates/category/msg.html
+        return "category/msg"; // /templates/category/msg.html
       }
     } else {
       return "redirect:/member/login_form_need";  // redirect

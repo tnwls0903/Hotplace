@@ -10,7 +10,7 @@ public class MsgCont {
     System.out.println("-> MsgCont created.");
   }
   
-  // http://localhost:9091/test
+  // http://localhost:9094/test
   @GetMapping(value={"/test"}) // GET 방식 요청
   @ResponseBody  // 리턴하는 내용이 파일이 아님
   public String msg() {
