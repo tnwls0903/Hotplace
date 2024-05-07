@@ -4,9 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   
-  <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
     <script>
@@ -21,19 +20,19 @@
   <div layout:fragment="content" style="width: 80%; margin: 50px auto; text-align: center;">
     <a class="nav-link" href="/contents/list_by_categoryno?categoryno=3"><p style="font-size: 27px; font-weight: bold;">"영등포" 유명 장소 보러가기</p></a>
    
-    <div class="bxslider" >
-      <div><img src="./images/k1.jpg"/></div>
-      <div><img src="./images/k2.jpg"/></div>
+    <div class="slider">
+      <div class="slide_img_1"></div>
+       <div class="slide_img_2"></div>
     </div>
   </div>
     <script>
-      var images = document.querySelectorAll('.bxslider img');
+      var images = document.querySelectorAll('.slider img');
 
-      for (var i = 0; i < images.length; i++) {
-          var image = images[i];
-          var title = image.title;
-          image.title = 'DB 데이터 WORD 가져오기';
-      }
+      // for (var i = 0; i < images.length; i++) {
+      //     var image = images[i];
+      //     var title = image.title;
+      //     image.title = 'DB 데이터 WORD 가져오기';
+      // }
 
       document.querySelector('img[src="./images/k2.jpg"]').addEventListener('click', function() {
         window.location.href = 'https://www.songpa.go.kr/culture/detailInfo.do?resrceCd=TR0147-1000053&sc1=TR0147&rcpp=6&key=3822';
@@ -41,7 +40,7 @@
       });
 
       $(function(){
-    $('.bxslider').bxSlider({
+    $('.slider').bxSlider({
       mode: 'fade',
       captions: true,
       slideWidth: 600,
