@@ -3,7 +3,7 @@
 <html layout:decorate="~{layout}"> <!-- layout.html 상속-->
 <div layout:fragment="content">
   <div class='title_line'>
-    <span th:text="${categoryVO.name }" class="title_line_text"></span > 
+    <span th:text="${categoryVO.name}" class="title_line_text"></span > 
     > <span th:text="${categoryVO.namesub}" class="title_line_text"></span > 
     > 글 수정
   </div>
@@ -23,7 +23,7 @@
   <form name='frm' method='post' th:object="${contentsVO}" action='./update_text'>
     <input type="hidden" name="categoryno" th:value="${categoryVO.categoryno}">
     <input type="hidden" name="contentsno" th:value="${contentsVO.contentsno}">
-    <input type="hidden" name="search_word" th:value="${word}">
+    <input type="hidden" name="search_word" th:value="${contentsVO.word}">
     <input type="hidden" name="now_page" th:value="${now_page}">
     
     <div>
