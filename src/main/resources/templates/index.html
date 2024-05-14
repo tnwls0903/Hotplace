@@ -25,7 +25,10 @@
     </div> 
     </div>
   </div>
-    <script>
+  <script th:inline="javascript">
+    /*<![CDATA[*/
+    var contentsVO = /*[[${contentsVO}]]*/ 'default';
+    /*]]>*/
       var sliderDiv = document.querySelector('.slider');
 
       for (let i = 0; i < contentsVO.length; i++) {
