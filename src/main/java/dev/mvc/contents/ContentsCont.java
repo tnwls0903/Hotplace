@@ -483,14 +483,15 @@ public class ContentsCont {
    model.addAttribute("menu", menu);
    model.addAttribute("word", word);
    model.addAttribute("now_page", now_page);
-      
+
    if (this.memberProc.isMemberAdmin(session)) { // 관리자로 로그인한경우
      ContentsVO contentsVO = this.contentsProc.read(contentsno);
      model.addAttribute("contentsVO", contentsVO); // 글 수정
-     
+     model.addAttribute("word", word);
+     model.addAttribute("now_page", now_page);
+        
      CategoryVO categoryVO = this.categoryProcess.read(contentsVO.getCategoryno());
      model.addAttribute("categoryVO", categoryVO);
-     
      
      return "/contents/update_text";
      // String content = "장소:\n인원:\n준비물:\n비용:\n기타:\n";
@@ -515,9 +516,6 @@ public class ContentsCont {
                                  String search_word, // contentsVO.word와 구분 필요
                                  int now_page) {
    
-   ra.addAttribute("word", search_word);
-   ra.addAttribute("now_page", now_page);
-   
    // System.out.println("-> word: " + contentsVO.getWord());
    
    if (this.memberProc.isMemberAdmin(session)) { // 관리자 로그인 확인
@@ -532,6 +530,9 @@ public class ContentsCont {
        ra.addFlashAttribute("cnt", 1);
        ra.addAttribute("contentsno", contentsVO.getContentsno());
        ra.addAttribute("categoryno", contentsVO.getCategoryno());
+       ra.addAttribute("word", search_word);
+       ra.addAttribute("now_page", now_page);
+       
        return "redirect:/contents/read"; // 페이지 자동 이동, @GetMapping(value="/read")
      } else { // 패스워드 불일치
        ra.addFlashAttribute("code", "passwd_fail");
@@ -685,6 +686,7 @@ public class ContentsCont {
      
      CategoryVO categoryVO = this.categoryProcess.read(contentsVO.getCategoryno());
      model.addAttribute("categoryVO", categoryVO);
+     
      
      return "/contents/delete";
    } else {
