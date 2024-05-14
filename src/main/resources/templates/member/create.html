@@ -159,60 +159,60 @@
   
   <div style="width: 60%; margin: 0px auto ">
     <form name="frm" id="frm" th:object="${memberVO}" method="post" action="/member/create">
-      <div>
+      <div class="form-group1">
         <label for="id">아이디(이메일)*</label>
         <input type="text" name="id" id="id" value="" autofocus="autofocus"
-               class="form-control fom-control-sm" style="width: 50%;" th:field="*{id}">
+               class="form-control fom-control-sm" style="width: 50%;" th:field="*{id}"> &nbsp;
         <button type='button' id="btn_checkID" onclick="checkID()" 
                      class="btn btn-primary btn-sm" style="margin-top: 4px;">중복확인</button>
         <span id='id_msg'></span>  
       </div>
       
-      <div class="form-group">
+      <div class="form-group1">
         <label for="passwd">패스워드*</label> 
         <input type='password' name='passwd' id='passwd' value='' required="required" 
-                  placeholder="패스워드" class="form-control form-control-sm" style="width: 30%;">
+                  placeholder="패스워드" class="form-control form-control-sm" style="width: 50%;">
       </div>
 
-      <div class="form-group">
+      <div class="form-group1">
         <label for="passwd2">패스워드 확인*</label>
         <input type='password' name='passwd2' id='passwd2' value='' required="required" 
-                  placeholder="패스워드 확인" class="form-control form-control-sm" style="width: 30%;">
+                  placeholder="패스워드 확인" class="form-control form-control-sm" style="width: 50%;">
         <span id='passwd2_msg'></span>
       </div>
 
-      <div class="form-group">
+      <div class="form-group1">
         <label for="mname">성명*</label>
         <input type='text' name='mname' id='mname' value='' required="required" 
-                   placeholder="성명" class="form-control form-control-sm" style="width: 30%;">
+                   placeholder="성명" class="form-control form-control-sm" style="width: 50%;">
         <span id='mname_msg'></span>
       </div>   
   
-      <div class="form-group">
+      <div class="form-group1">
         <label for="tel">전화 번호*</label>
         <input type='text' name='tel' id='tel' value='' required="required" 
-                  placeholder="전화번호" class="form-control form-control-sm" style="width: 30%;">
-        예) 010-1234-5678
+                  placeholder="전화번호" class="form-control form-control-sm" style="width: 50%;">
+          &nbsp; 예) 010-1234-5678
       </div>
       
-      <div class="form-group"> 
+      <div class="form-group1"> 
         <label for="zipcode">우편 번호</label>
         <input type='text' name='zipcode' id='zipcode' value='' placeholder="우편번호"
-                  class="form-control form-control-sm" style="width: 30%;">
+                  class="form-control form-control-sm" style="width: 50%;"> &nbsp;
         <button type="button" id="btn_DaumPostcode" onclick="DaumPostcode()" 
                   class="btn btn-primary btn-sm" style="margin-top: 4px;">우편번호 찾기</button>
       </div>  
   
-      <div class="form-group">
+      <div class="form-group1">
         <label for="address1" style="width: 100%;">주소</label>
         <input type='text' name='address1' id='address1' value='' placeholder="주소"
-                   class="form-control form-control-sm">
+                   class="form-control form-control-sm " style="width: 50%;">
       </div>   
   
-      <div class="form-group">
+      <div class="form-group1">
         <label for="address2" style="width: 100%;">상세 주소</label>
         <input type='text' name='address2' id='address2' value='' placeholder="상세 주소"
-                  class="form-control form-control-sm">
+                  class="form-control form-control-sm" style="width: 50%;" >
       </div>   
 
 <!-- ------------------------------ DAUM 우편번호 API 시작 ------------------------------ -->

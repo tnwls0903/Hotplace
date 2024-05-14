@@ -36,7 +36,157 @@ import lombok.ToString;
 public class ContentsVO {
     /** 컨텐츠 번호 */
     private int contentsno;
-    /** 관리자 권한의 회원 번호 */
+    public int getContentsno() {
+		return contentsno;
+	}
+	public void setContentsno(int contentsno) {
+		this.contentsno = contentsno;
+	}
+	public int getMemberno() {
+		return memberno;
+	}
+	public void setMemberno(int memberno) {
+		this.memberno = memberno;
+	}
+	public int getCategoryno() {
+		return categoryno;
+	}
+	public void setCategoryno(int categoryno) {
+		this.categoryno = categoryno;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
+	}
+	public int getRecom() {
+		return recom;
+	}
+	public void setRecom(int recom) {
+		this.recom = recom;
+	}
+	public int getCnt() {
+		return cnt;
+	}
+	public void setCnt(int cnt) {
+		this.cnt = cnt;
+	}
+	public int getReplycnt() {
+		return replycnt;
+	}
+	public void setReplycnt(int replycnt) {
+		this.replycnt = replycnt;
+	}
+	public String getPasswd() {
+		return passwd;
+	}
+	public void setPasswd(String passwd) {
+		this.passwd = passwd;
+	}
+	public String getWord() {
+		return word;
+	}
+	public void setWord(String word) {
+		this.word = word;
+	}
+	public String getRdate() {
+		return rdate;
+	}
+	public void setRdate(String rdate) {
+		this.rdate = rdate;
+	}
+	public String getMap() {
+		return map;
+	}
+	public void setMap(String map) {
+		this.map = map;
+	}
+	public String getYoutube() {
+		return youtube;
+	}
+	public void setYoutube(String youtube) {
+		this.youtube = youtube;
+	}
+	public String getMp4() {
+		return mp4;
+	}
+	public void setMp4(String mp4) {
+		this.mp4 = mp4;
+	}
+	public MultipartFile getFile1MF() {
+		return file1MF;
+	}
+	public void setFile1MF(MultipartFile file1mf) {
+		file1MF = file1mf;
+	}
+	public String getSize1_label() {
+		return size1_label;
+	}
+	public void setSize1_label(String size1_label) {
+		this.size1_label = size1_label;
+	}
+	public String getFile1() {
+		return file1;
+	}
+	public void setFile1(String file1) {
+		this.file1 = file1;
+	}
+	public String getFile1saved() {
+		return file1saved;
+	}
+	public void setFile1saved(String file1saved) {
+		this.file1saved = file1saved;
+	}
+	public String getThumb1() {
+		return thumb1;
+	}
+	public void setThumb1(String thumb1) {
+		this.thumb1 = thumb1;
+	}
+	public long getSize1() {
+		return size1;
+	}
+	public void setSize1(long size1) {
+		this.size1 = size1;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public int getDc() {
+		return dc;
+	}
+	public void setDc(int dc) {
+		this.dc = dc;
+	}
+	public int getSaleprice() {
+		return saleprice;
+	}
+	public void setSaleprice(int saleprice) {
+		this.saleprice = saleprice;
+	}
+	public int getPoint() {
+		return point;
+	}
+	public void setPoint(int point) {
+		this.point = point;
+	}
+	public int getSalecnt() {
+		return salecnt;
+	}
+	public void setSalecnt(int salecnt) {
+		this.salecnt = salecnt;
+	}
+	/** 관리자 권한의 회원 번호 */
     private int memberno;
     /** 카테고리 번호 */
     private int categoryno;

@@ -21,7 +21,63 @@ import lombok.Setter;
 
 @Setter @Getter
 public class CategoryVO {
-  /** 오버렌딩 카테고리 번호 */
+  public Integer getCategoryno() {
+		return categoryno;
+	}
+
+	public void setCategoryno(Integer categoryno) {
+		this.categoryno = categoryno;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getNamesub() {
+		return namesub;
+	}
+
+	public void setNamesub(String namesub) {
+		this.namesub = namesub;
+	}
+
+	public Integer getCnt() {
+		return cnt;
+	}
+
+	public void setCnt(Integer cnt) {
+		this.cnt = cnt;
+	}
+
+	public String getRdate() {
+		return rdate;
+	}
+
+	public void setRdate(String rdate) {
+		this.rdate = rdate;
+	}
+
+	public Integer getSeqno() {
+		return seqno;
+	}
+
+	public void setSeqno(Integer seqno) {
+		this.seqno = seqno;
+	}
+
+	public String getVisible() {
+		return visible;
+	}
+
+	public void setVisible(String visible) {
+		this.visible = visible;
+	}
+
+/** 오버렌딩 카테고리 번호 */
   private Integer categoryno=0;
   
   /** 중분류명 */

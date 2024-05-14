@@ -28,5 +28,21 @@ public class CategoryVOMenu {
   
   /** 소분류명 */
   ArrayList<CategoryVO> list_namesub;
+
+public String getName() {
+	return name;
+}
+
+public void setName(String name) {
+	this.name = name;
+}
+
+public ArrayList<CategoryVO> getList_namesub() {
+	return list_namesub;
+}
+
+public void setList_namesub(ArrayList<CategoryVO> list_namesub) {
+	this.list_namesub = list_namesub;
+}
 }
 
