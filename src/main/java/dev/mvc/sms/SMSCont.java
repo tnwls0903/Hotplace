@@ -1,14 +1,19 @@
 package dev.mvc.sms;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import dev.mvc.category.CategoryVO;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
 
 @RequestMapping("/category")
@@ -29,7 +34,7 @@ public class SMSCont {
   return "/sms/{form}";
   }
   
-  //http://localhost:9091/sms/proc.do
+  //http://localhost:9094/sms/proc.do
   /**
  * 사용자에게 인증 번호를 생성하여 전송
  * @param session
