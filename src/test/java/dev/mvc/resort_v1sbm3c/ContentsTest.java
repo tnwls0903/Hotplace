@@ -24,6 +24,7 @@ public class ContentsTest {
   @Autowired
   @Qualifier("dev.mvc.contents.ContentsProc") // @Component("dev.mvc.contents.ContentsProc")
   private ContentsProcInter contentsProc;
+
   
   @Test
   public void testRead() {
