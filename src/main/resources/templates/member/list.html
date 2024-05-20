@@ -26,17 +26,16 @@
       <col style='width: 10%;'/>
     </colgroup>
     <tr>
-      <th class='th_bs'> </TH>
-      <th class='th_bs'>ID</th>
-      <th class='th_bs'>성명</th>
-      <th class='th_bs'>전화번호</th>
-      <th class='th_bs'>주소</th>
-      <th class='th_bs'>등록일</th>
-      <th class='th_bs'> </th>
-    </tr>
+      <th class='th_bs' style="text-align:center;">ID</th>
+      <th class='th_bs' style="text-align:center;">성명</th>
+      <th class='th_bs' style="text-align:center;">전화번호</th>
+      <th class='th_bs' style="text-align:center;">주소</th>
+      <th class='th_bs' style="text-align:center;">등록일</th>
+      <th class='th_bs' style="text-align:center;">기타</th>
+    </tr> 
    
     <tr th:each="memberVO, status:${list}">
-      <td class='td_basic'>
+      <td class='td_basic' style="text-align:center;">
         <div>
           <div th:if="${memberVO.grade >= 1 and memberVO.grade <= 10}"><img src='/member/images/admin.png' title="관리자" class="icon"></div>
           <div th:if="${memberVO.grade >= 11 and memberVO.grade <= 20}"><img src='/member/images/user.png' title="회원" class="icon"></div>
@@ -44,15 +43,15 @@
           <div th:if="${memberVO.grade >= 40 and memberVO.grade <= 49}"><img src='/member/images/x.png' title="탈퇴 회원" class="icon"></div>
         </div>
       </td>
-      <td class='td_left'><a th:href="@{|./read?memberno=${memberVO.memberno}|}" th:text="${memberVO.id}"></a></td>
-      <td class='td_left'><a th:href="@{|./read?memberno=${memberVO.memberno}|}" th:text="${memberVO.mname}"></a></td>
-      <td class='td_basic' th:text="${memberVO.tel}"></td>
-      <td class='td_left'>
+      <td class='td_left' style="text-align:center;"><a th:href="@{|./read?memberno=${memberVO.memberno}|}" th:text="${memberVO.id}"></a></td>
+      <td class='td_left' style="text-align:center;"><a th:href="@{|./read?memberno=${memberVO.memberno}|}" th:text="${memberVO.mname}"></a></td>
+      <td class='td_basic' th:text="${memberVO.tel}" style="text-align:center;"></td>
+      <td class='td_left' style="text-align:center;">
         <span th:if="${memberVO.address1.length() > 15 }" th:text="|${memberVO.address1.substring(0, 15) }...|"></span>
         <span th:unless="${memberVO.address1.length() > 15 }" th:text="${memberVO.address1}"></span>
       </td>
-      <td class='td_basic' th:text="${memberVO.mdate.substring(0, 10)}"></td>
-      <td class='td_basic'>
+      <td class='td_basic' th:text="${memberVO.mdate.substring(0, 10)}" style="text-align:center;"></td>
+      <td class='td_basic' style="text-align:center;">
         <a th:href="@{|./read?memberno=${memberVO.memberno}|}"><img src='/member/images/update.png' title='수정' class="icon"></a>
         <a th:href="@{|./delete?memberno=${memberVO.memberno}|}"><img src='/member/images/delete.png' title='삭제' class="icon"></a>
       </td>

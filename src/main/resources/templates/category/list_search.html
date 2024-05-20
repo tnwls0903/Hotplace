@@ -17,28 +17,28 @@
 
   <div style="display: flex; justify-content: center;">
     <form name="frm" th:object="${categoryVO}" method="post" action="/category/create">
-      <div style="margin-right: 5px; width: 30%; float: left;">
+      <div style="margin-right: 5px; width: 29%; float: left;">
         <input type="text" name="name" value="" autofocus="autofocus"
                class="form-control fom-control-sm" style="width: 100%;" th:field="*{name}" placeholder="중분류">
         <div th:if="${#fields.hasErrors('name')}" class="alert alert-danger" role="alert" style="margin-top: 5px;">
           <div th:each="err : ${#lists.sort(#fields.errors('name'))}" th:text="${err}"></div>
         </div>  
       </div>
-      <div style="margin-right: 5px; width: 30%; float: left;">
+      <div style="margin-right: 5px; width: 29%; float: left;">
         <input type="text" name="namesub" value="" 
                class="form-control fom-control-sm" style="width: 100%;" th:field="*{namesub}" placeholder="소분류, '-' 중분류로 등록">
         <div th:if="${#fields.hasErrors('namesub')}" class="alert alert-danger" role="alert" style="margin-top: 5px;">
           <div th:each="err : ${#lists.sort(#fields.errors('namesub'))}" th:text="${err}"></div>
         </div>             
       </div>
-      <div style="margin-right: 5px; width: 25%; float: left;">
+      <div style="margin-right: 5px; width: 24%; float: left;">
         <input type="text" name="seqno" value="" 
                class="form-control fom-control-sm" style="width: 100%;" th:field="*{seqno}" placeholder="출력순서">
         <div th:if="${#fields.hasErrors('seqno')}" class="alert alert-danger" role="alert" style="margin-top: 5px;">
           <div th:each="err : ${#lists.sort(#fields.errors('seqno'))}" th:text="${err}"></div>
         </div>             
       </div>
-      <div style="margin-top: 3px; width: 12%; float: left;">
+      <div style="margin-top: 3px; width: 15%; float: left;">
         <button type="submit" class="btn btn-secondary btn-sm">등록</button>
         <button type="button" onclick="location.href='/category/list_search'" class="btn btn-secondary btn-sm">취소</button>
       </div>

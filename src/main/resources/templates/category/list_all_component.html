@@ -10,22 +10,22 @@
     </colgroup>
     <thead>
       <tr>
-        <th class="th_bs">번호</th>
-        <th class="th_bs">중분류</th>
-        <th class="th_bs">소분류</th>
-        <th class="th_bs">자료수</th>
-        <th class="th_bs">등록일</th>
-        <th class="th_bs">순서 / 기타</th>
+        <th class="th_bs" style="text-align:center;">번호</th>
+        <th class="th_bs" style="text-align:center;">중분류</th>
+        <th class="th_bs" style="text-align:center;">소분류</th>
+        <th class="th_bs" style="text-align:center;">자료수</th>
+        <th class="th_bs" style="text-align:center;">등록일</th>
+        <th class="th_bs" style="text-align:center;">순서 / 기타</th>
       </tr>
-    </thead>
+    </thead> 
     <tbody>
       <tr th:each="categoryVO, status:${list}">
-        <td class="td_bs" th:text="|${no - status.index}|"></td>
-        <td class="td_bs"><a th:href="@{|/category/read/${categoryVO.categoryno}?word=${word}&now_page=${now_page}|}" style="display: block;" th:text="${categoryVO.name}"></a></td>
-        <td class="td_bs"><a th:href="@{|/category/read/${categoryVO.categoryno}?word=${word}&now_page=${now_page}|}" style="display: block;" th:text="${categoryVO.namesub}"></a></td>
-        <td class="td_bs" th:text="${categoryVO.cnt}"></td>
-        <td class="td_bs" th:text="${categoryVO.rdate.substring(5, 10)}"></td>
-        <td class="td_bs">
+        <td class="td_bs" th:text="|${no - status.index}|" style="text-align:center;"></td>
+        <td class="td_bs"><a th:href="@{|/category/read/${categoryVO.categoryno}?word=${word}&now_page=${now_page}|}" style="display: block; text-align:center;" th:text="${categoryVO.name}"></a></td>
+        <td class="td_bs"><a th:href="@{|/category/read/${categoryVO.categoryno}?word=${word}&now_page=${now_page}|}" style="display: block; text-align:center;" th:text="${categoryVO.namesub}"></a></td>
+        <td class="td_bs" th:text="${categoryVO.cnt}" style="text-align:center;"></td>
+        <td class="td_bs" th:text="${categoryVO.rdate.substring(5, 10)}" style="text-align:center;"></td>
+        <td class="td_bs" style="text-align:center;">
           <span th:text="${categoryVO.seqno}" style="margin-right: 3px;"></span>          
           <span th:if="${categoryVO.visible == 'Y'}">
             <a th:href="@{|/category/update_visible_n/${categoryVO.categoryno}?word=${word}&now_page=${now_page}|}"><img src="/category/images/show.png" class="icon" title="출력"></a> <!-- /static/category/images/show.png -->
