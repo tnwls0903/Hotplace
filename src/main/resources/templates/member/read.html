@@ -59,21 +59,21 @@
     <form name="frm" id="frm" th:object="${memberVO}" method="post" action="/member/update">
       <input type="hidden" name="memberno" th:value="${memberVO.memberno}">
       
-      <div class="form-group">
+      <div class="form-group1">
         <label for="mname">성명*</label>
         <input type='text' name='mname' id='mname' th:value='${memberVO.mname}' required="required" 
                    placeholder="성명" class="form-control form-control-sm" style="width: 30%;">
         <span id='mname_msg'></span>
       </div>   
   
-      <div class="form-group">
+      <div class="form-group1">
         <label for="tel">전화 번호</label>
         <input type='text' name='tel' id='tel' th:value='${memberVO.tel}' required="required" 
                   placeholder="전화번호" class="form-control form-control-sm" style="width: 30%;">
         예) 010-0000-0000
       </div>
       
-      <div class="form-group"> 
+      <div class="form-group1"> 
         <label for="zipcode">우편 번호</label>
         <input type='text' name='zipcode' id='zipcode' th:value='${memberVO.zipcode}' placeholder="우편번호"
                   class="form-control form-control-sm" style="width: 30%;">
@@ -81,13 +81,13 @@
                   class="btn btn-primary btn-sm" style="margin-top: 4px;">우편번호 찾기</button>
       </div>  
   
-      <div class="form-group">
+      <div class="form-group1">
         <label for="address1" style="width: 100%;">주소</label>
         <input type='text' name='address1' id='address1' th:value='${memberVO.address1}' placeholder="주소"
                    class="form-control form-control-sm">
       </div>   
   
-      <div class="form-group">
+      <div class="form-group1">
         <label for="address2" style="width: 100%;">상세 주소</label>
         <input type='text' name='address2' id='address2' th:value='${memberVO.address2}' placeholder="상세 주소"
                   class="form-control form-control-sm">

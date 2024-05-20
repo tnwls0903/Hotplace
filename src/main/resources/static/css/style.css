@@ -524,6 +524,151 @@
     vertical-align: middle;
   }
   
-  
-  
+   .form-group1 {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            margin-bottom: 10px;
+        }
+        
+        .form-group1 label {
+            flex: 0 0 30%;
+            text-align: left;
+            margin-right: -140px;
+            margin-left: 160px;
+        }
+
+        .form-group1 input{
+            flex: 0 0 40%;
+        }
+        .form-group1 button{
+            flex: 0 0 15%;
+        }
+
+        .phone-input {
+            flex: 0 0 40%;
+            display: flex;
+            align-items: center;
+        }
+
+        .phone-input input {
+            flex: 1;
+            margin-right: 5px;
+        }
+        
+        
+      
+ /* General Styles */
+/* 본문 기본 스타일 설정 
+templates.member의 list.html
+*/
+body {
+   /* font-family: 'Arial', sans-serif; */ /* 기본 글꼴 설정 */
+    background-color: #f8f9fa;       /* 배경 색상을 연한 회색으로 설정 */
+    color: #333;                     /* 글자 색상을 어두운 회색으로 설정 */
+    margin: 0;                       /* 기본 마진을 0으로 설정 */
+    padding: 0;                      /* 기본 패딩을 0으로 설정 */
+    line-height: 1.6;                /* 줄 간격을 1.6으로 설정 */
+}
+
+/* 제목 스타일 설정 */
+.title_line {
+    font-size: 1.5em;                /* 글자 크기를 1.5배로 설정 */
+    font-weight: bold;               /* 글자를 굵게 설정 */
+   /* margin: 20px 0;     */             /* 위아래 마진을 20px로 설정 */
+   /* text-align: center;   */           /* 텍스트를 중앙 정렬 */
+    color: #007bff;                  /* 글자 색상을 파란색으로 설정 */
+}
+
+/* Header Styles */
+/* 오른쪽 사이드 메뉴 스타일 설정 */
+.aside_right {
+    text-align: right;               /* 텍스트를 오른쪽 정렬 */
+    padding: 10px 20px;              /* 위아래 패딩 10px, 좌우 패딩 20px 설정 */
+}
+
+/* 오른쪽 사이드 메뉴의 링크 스타일 설정 */
+.aside_right a {
+    text-decoration: none;           /* 링크의 밑줄 제거 */
+    color: #007bff;                  /* 링크 글자 색상을 파란색으로 설정 */
+    margin: 0 10px;                  /* 좌우 마진을 10px로 설정 */
+}
+
+.aside_right a:hover {
+    color: #0056b3;                  /* 링크에 마우스를 올리면 진한 파란색으로 변경 */
+}
+
+/* 메뉴 구분선 색상 설정 */
+.menu_divide {
+    color: #ccc;                     /* 구분선 색상을 연한 회색으로 설정 */
+}
+
+/* Table Styles */
+/* 테이블 기본 스타일 설정 */
+.table {
+    width: 100%;                     /* 테이블 너비를 100%로 설정 */
+    border-collapse: collapse;       /* 테두리 겹침을 없애기 위해 collapse 설정 */
+    margin: 20px 0;                  /* 위아래 마진을 20px로 설정 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+}
+
+/* 테이블 헤더와 셀 스타일 설정 */
+.table th, .table td {
+    padding: 12px 15px;              /* 패딩을 12px 15px로 설정 */
+    border: 1px solid #ddd;          /* 연한 회색 테두리 설정 */
+    text-align: left;                /* 텍스트를 왼쪽 정렬 */
+}
+
+/* 테이블 헤더 스타일 설정 */
+.table th {
+    background-color: #007bff;       /* 헤더 배경 색상을 파란색으로 설정 */
+    color: white;                    /* 헤더 글자 색상을 흰색으로 설정 */
+    text-transform: uppercase;       /* 헤더 글자를 대문자로 변환 */
+    letter-spacing: 1px;             /* 글자 간격을 1px로 설정 */
+}
+
+/* 홀수 행 배경 색상 설정 */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;       /* 홀수 행 배경 색상을 연한 회색으로 설정 */
+}
+
+/* 기본 셀 텍스트 가운데 정렬 */
+.td_basic {
+    text-align: center;              /* 텍스트를 가운데 정렬 */
+}
+
+/* 왼쪽 정렬 셀 스타일 설정 */
+.td_left {
+    text-align: left;                /* 텍스트를 왼쪽 정렬 */
+}
+
+/* 아이콘 이미지 크기 설정 */
+.td_basic img.icon {
+    width: 20px;                     /* 아이콘 너비를 20px로 설정 */
+    height: 20px;                    /* 아이콘 높이를 20px로 설정 */
+}
+
+/* Bottom Menu Styles */
+/* 하단 메뉴 스타일 설정 */
+.bottom_menu {
+    text-align: center;              /* 텍스트를 중앙 정렬 */
+    margin: 20px 0;                  /* 위아래 마진을 20px로 설정 */
+}
+
+/* 버튼 스타일 설정 */
+.bottom_menu button {
+    background-color: #007bff;       /* 배경 색상을 파란색으로 설정 */
+    color: white;                    /* 글자 색상을 흰색으로 설정 */
+    border: none;                    /* 테두리를 없앰 */
+    padding: 10px 20px;              /* 패딩을 10px 20px로 설정 */
+    cursor: pointer;                 /* 커서를 포인터로 변경 */
+    font-size: 14px;                 /* 폰트 크기를 14px로 설정 */
+    border-radius: 5px;              /* 테두리 반경을 5px로 설정 */
+    transition: background-color 0.3s ease; /* 배경 색상 변화를 0.3초 동안 부드럽게 */
+}
+
+.bottom_menu button:hover {
+    background-color: #0056b3;       /* 마우스를 올리면 배경 색상을 진한 파란색으로 변경 */
+}
+
   
