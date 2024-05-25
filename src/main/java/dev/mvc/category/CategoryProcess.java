@@ -171,6 +171,20 @@ public class CategoryProcess implements CategoryProcessInterface {
     int cnt = this.categoryDAO.list_search_count(word);
     return cnt;
   }
+  
+  @Override
+  public int cnt_plus(int categoryno) {
+    int cnt = this.categoryDAO.cnt_plus(categoryno);
+    
+    return cnt;
+  }
+
+  @Override
+  public int cnt_minus(int categoryno) {
+    int cnt = this.categoryDAO.cnt_minus(categoryno);
+    
+    return cnt;
+  }
 
 
   /** 

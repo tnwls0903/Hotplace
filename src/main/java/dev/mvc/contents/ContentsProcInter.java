@@ -144,5 +144,4 @@ public interface ContentsProcInter {
    */
   public int delete_by_memberno(int memberno);
   
-  
 }

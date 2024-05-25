@@ -121,6 +121,20 @@
         
     ORDER BY seqno ASC
   </select>
+  
+  <!-- 관련 자료 수 증가 -->
+  <update id="cnt_plus" parameterType="int">
+    UPDATE category
+    SET cnt = cnt + 1
+    WHERE categoryno = #{categoryno}
+  </update>
+  
+  <!-- 관련 자료 수 감소 -->
+  <update id="cnt_minus" parameterType="int">
+    UPDATE category
+    SET cnt = cnt - 1
+    WHERE categoryno = #{categoryno}
+  </update>
                 
 </mapper>
 

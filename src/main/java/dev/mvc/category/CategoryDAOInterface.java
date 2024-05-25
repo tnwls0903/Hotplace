@@ -111,5 +111,19 @@ public interface CategoryDAOInterface {
    * @return
    */
   public int list_search_count(String word);
+  
+  /**
+   * 관련자료 수 증가
+   * @param categoryno
+   * @return
+   */
+  public int cnt_plus(int categoryno);
+  
+  /**
+   * 관련자료 수 감소
+   * @param categoryno
+   * @return
+   */
+  public int cnt_minus(int categoryno);
 }
 

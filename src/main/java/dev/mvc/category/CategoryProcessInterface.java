@@ -115,6 +115,20 @@ public interface CategoryProcessInterface {
    * @return
    */
   public int list_search_count(String word);
+  
+  /**
+   * 관련자료 수 증가
+   * @param categoryno
+   * @return
+   */
+  public int cnt_plus(int categoryno);
+  
+  /**
+   * 관련자료 수 감소
+   * @param categoryno
+   * @return
+   */
+  public int cnt_minus(int categoryno);
 
   /** 
    * SPAN태그를 이용한 박스 모델의 지원, 1 페이지부터 시작 

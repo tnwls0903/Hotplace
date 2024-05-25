@@ -12,18 +12,15 @@ import java.util.ArrayList;
 import java.net.InetAddress;
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.beans.factory.annotation.Autowired; 
 
 public class SMSProc {
-  @Autowired
-  private SMSCont smsCont;
   
     public static void main(String[] args, HttpServletRequest request) throws Exception {
         String charsetType = "UTF-8"; //EUC-KR 또는 UTF-8
 
         String action = request.getParameter("action");
         if(action.equals("go")) {
-            String sms_url = "https://sslsms.cafe24.com/sms_sender.php"; // SMS 전송요청 URL
+            String sms_url = "https://sslsms.cafe24.com/sms_sender.php"; // SMS 전송요청 URL, 유료
             String user_id = base64Encode("itwillsms"); // SMS 아이디
             String secure = base64Encode("2a828056a1882665c31fc8538c56c1bf"); // 인증키
             String msg = base64Encode(nullcheck((String)request.getAttribute("msg"), ""));

@@ -88,6 +88,8 @@ public class ContentsCont {
                                            ContentsVO contentsVO,
                                            RedirectAttributes ra) {
     
+    int categoryNO = contentsVO.getCategoryno(); // 카테고리 글 번호 가져오기
+    
     if (memberProc.isMemberAdmin(session)) { // 관리자로 로그인한경우
       // ------------------------------------------------------------------------------
       // 파일 전송 코드 시작
@@ -164,7 +166,12 @@ public class ContentsCont {
         // System.out.println("-> contentsVO.getCategoryno(): " + contentsVO.getCategoryno());
         // ra.addFlashAttribute("categoryno", contentsVO.getCategoryno()); // controller -> controller: X
         
+        System.out.println("등록 성공");
+        System.out.println("-> categoryNO: " + contentsVO.getCategoryno());
+        this.categoryProcess.cnt_plus(contentsVO.getCategoryno()); // 관련 글 수 증가
+        
         ra.addAttribute("categoryno", contentsVO.getCategoryno()); // controller -> controller: O
+        ra.addAttribute("categoryNO", categoryNO);
         return "redirect:/contents/list_by_categoryno";
         
         // return "redirect:/contents/list_by_categoryno?categoryno=" + contentsVO.getCategoryno();  // /templates/contents/list_by_categoryno.html
@@ -706,7 +713,7 @@ public class ContentsCont {
                                        int categoryno,
                                        String word,
                                        int now_page) {
-
+   
    // -------------------------------------------------------------------
    // 파일 삭제 시작
    // -------------------------------------------------------------------
@@ -724,6 +731,8 @@ public class ContentsCont {
    // -------------------------------------------------------------------
        
    this.contentsProc.delete(contentsno); // DBMS 삭제
+   
+   this.categoryProcess.cnt_minus(contentsVO_read.getCategoryno()); // 관련 글 수 감소
        
    // -------------------------------------------------------------------------------------
    // 마지막 페이지의 마지막 레코드 삭제시의 페이지 번호 -1 처리

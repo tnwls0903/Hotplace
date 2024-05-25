@@ -122,7 +122,7 @@
   <!-- 글 수정 -->
   <update id="update_text" parameterType="dev.mvc.contents.ContentsVO">
     UPDATE contents
-    SET title=#{title}, content=#{content},  word=#{word}
+    SET title=#{title}, content=#{content},  word=#{word}, cnt=#{cnt}
     WHERE contentsno = #{contentsno}
   </update>
 
