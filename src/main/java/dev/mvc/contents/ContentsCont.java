@@ -578,7 +578,7 @@ public class ContentsCont {
    CategoryVO categoryVO = this.categoryProcess.read(contentsVO.getCategoryno());
    model.addAttribute("categoryVO", categoryVO);
    
-   return "update_file"; // /templates/contents/update_file.html
+   return "contents/update_file"; // /templates/contents/update_file.html
  }
  
  /**
