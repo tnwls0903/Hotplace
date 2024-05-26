@@ -11,7 +11,7 @@
   <aside class="aside_right" th:if="${session.grade == 'admin'}">
     <a th:href="@{|/contents/create?categoryno=${categoryVO.categoryno}|}">등록</a>
     <span class='menu_divide' >│</span>
-    <a th:href="@{|/contents/update_text?contentsno=${contentsVO.contentsno}&word=${word}&now_page=${now_page}|}">글 수정</a>
+    <a th:href="@{|/contents/update_text?contentsno=${contentsVO.contentsno}&now_page=${now_page}&word=${word}|}">글 수정</a>
     <span class='menu_divide' >│</span>
     <a th:href="@{|/contents/update_file?contentsno=${contentsVO.contentsno}&now_page=${now_page}&word=${word}|}">파일 수정</a>  
     <span class='menu_divide' >│</span>

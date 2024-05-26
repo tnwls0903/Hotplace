@@ -20,11 +20,13 @@
   
   <div class='menu_line'></div>
   
-  <form name='frm' method='post' th:object="${contentsVO}" action='./update_text'>
+	<form name='frm_text' method='post' th:object='${contentsVO}' action='./update_text'>
+<!--	<form name='frm_text' method='post' action='./update_text'> -->
     <input type="hidden" name="categoryno" th:value="${categoryVO.categoryno}">
     <input type="hidden" name="contentsno" th:value="${contentsVO.contentsno}">
-    <input type="hidden" name="search_word" th:value="${word}">
     <input type="hidden" name="now_page" th:value="${now_page}">
+    <input type="hidden" name="search_word" th:value="${word}">
+    
     
     <div>
        <label>제목</label>

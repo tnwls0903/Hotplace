@@ -42,7 +42,7 @@
         <div style='text-align: left; width: 47%; float: left;'>
           <span style='font-size: 1.5em;' th:text="${contentsVO.title}"></span>
           <br>
-          <form name='frm' method='POST' action='./update_file' enctype="multipart/form-data">
+          <form name='frm_file' method='POST' action='./update_file' enctype="multipart/form-data">
             <input type="hidden" name="categoryno" th:value="${categoryVO.categoryno }">
             <input type="hidden" name="contentsno" th:value="${contentsVO.contentsno }">
             <input type="hidden" name="now_page" th:value="${now_page}">

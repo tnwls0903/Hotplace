@@ -478,11 +478,11 @@ public class ContentsCont {
   * http://localhost:9094/contents/update_text?contentsno=1
   * @return
   */
- @GetMapping(value = "/update_text")
+ @GetMapping(value="/update_text")
  public String update_text(HttpSession session,
                                  Model model,
-                                 int contentsno,
                                  RedirectAttributes ra,
+                                 int contentsno,
                                  String word,
                                  int now_page) {
    
@@ -500,10 +500,10 @@ public class ContentsCont {
      CategoryVO categoryVO = this.categoryProcess.read(contentsVO.getCategoryno());
      model.addAttribute("categoryVO", categoryVO);
      
-     return "/contents/update_text";
+     return "contents/update_text";
      // String content = "장소:\n인원:\n준비물:\n비용:\n기타:\n";
      // mav.addObject("content", content);
-
+     
    } else {
      ra.addAttribute("url", "/member/login_cookie_need"); // /templates/member/login_cookie_need.html
      return "redirect:/contents/msg"; // templates/contents/msg.html, @GetMapping(value="/msg")
@@ -569,7 +569,6 @@ public class ContentsCont {
    
    ArrayList<CategoryVOMenu> menu = this.categoryProcess.menu();
    model.addAttribute("menu", menu);
-   
    model.addAttribute("word", word);
    model.addAttribute("now_page", now_page);
    
