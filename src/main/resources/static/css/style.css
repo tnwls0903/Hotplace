@@ -2,321 +2,328 @@
 
 /* 폰트 선언 */
 @font-face {
-    font-family: 'KCC-Hanbit';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "KCC-Hanbit";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* 모든 태그에 적용 */
 * {
-    font-family: KCC-Hanbit;
-    font-size: 14px;
-    margin: 0px; /* top right bottom left */
-    padding: 0px;
-    color: #555555;
+  font-family: KCC-Hanbit;
+  font-size: 14px;
+  margin: 0px; /* top right bottom left */
+  padding: 0px;
+  color: #555555;
 }
 
 .container_main {
-    width: 98%;
-    margin: 5px auto;
+  width: 98%;
+  margin: 5px auto;
 }
 
 .mr-20p {
-    margin-right: 20px;
-    background-image: url('./images/icon_building_h1.png');
+  margin-right: 20px;
+  background-image: url("./images/icon_building_h1.png");
 }
 
 .culture-sns-btn {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 350px;
-    height: 60px;
-    padding-left: 20px;
-    border: 1px solid #d1d1d1;
-    font-size: 18px;
-    font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 60px;
+  padding-left: 20px;
+  border: 1px solid #d1d1d1;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .culture-btn {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 350px;
-    height: 60px;
-    padding-left: 20px;
-    border: 1px solid #d1d1d1;
-    font-size: 18px;
-    font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 60px;
+  padding-left: 20px;
+  border: 1px solid #d1d1d1;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 /* 이미지 사용시 경로 지정
   /static/css/images/top_1920_400.jpg
   */
 .top_menu_img {
-    width: 100%;
-    height: 200px;
-    background-image: url('./images/k3.png');
-    margin-bottom: 0px;
+  width: 100%;
+  height: 200px;
+  background-image: url("./images/k3.png");
+  margin-bottom: 0px;
 }
 
 .slide_img_1 {
-    width: 100%;
-    height: 500px;
-    background-image: url('./images/k1.jpg');
-    margin-bottom: 0px;
+  font-size: 30px;
+  padding-top: 250px;
+  color: rgb(255, 0, 255);
+  width: 100%;
+  height: 500px;
+  background-image: url("./images/k1.jpg");
+  margin-bottom: 0px;
 }
 
 .slide_img_2 {
-    width: 100%;
-    height: 500px;
-    background-image: url('./images/k2.png');
-    margin-bottom: 0px;
+  font-size: 30px;
+  padding-top: 250px;
+  color: rgb(255, 0, 255);
+  width: 100%;
+  height: 500px;
+  background-image: url("./images/k2.png");
+  margin-bottom: 0px;
 }
 
 .top_menu_label {
-    position: relative; /* 속해 있는 부모 태그 기준 설정 */
-    top: 80%;
-    left: 0.5%;
-    color: #ffffff;
-    font-size: 2em;
+  position: relative; /* 속해 있는 부모 태그 기준 설정 */
+  top: 80%;
+  left: 0.5%;
+  color: #ffffff;
+  font-size: 2em;
 }
 
 .top_menu {
-    position: relative; /* 부모 태그 기준, 화면 상단 기준*/
-    top: 52%;
-    background-color: rgba(50, 50, 50, 0.3); /* 0.1: Alpha, 투명도 */
-    color: white;
-    padding-top: 2px;
-    padding-left: 10px;
-    height: 22px;
+  position: relative; /* 부모 태그 기준, 화면 상단 기준*/
+  top: 52%;
+  background-color: rgba(50, 50, 50, 0.3); /* 0.1: Alpha, 투명도 */
+  color: white;
+  padding-top: 2px;
+  padding-left: 10px;
+  height: 22px;
 }
 
 /* 화면 상단 메뉴 세로 구분선
      <span class='top_menu_sep'>&nbsp;</span> */
 .top_menu_sep {
-    background: url('/css/images/gray.jpg') center center no-repeat;
-    background-size: 1px;
-    width: 1px;
-    margin-left: 5px;
-    margin-right: 5px;
+  background: url("/css/images/gray.jpg") center center no-repeat;
+  background-size: 1px;
+  width: 1px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .menu_line {
-    width: 100%;
-    border-bottom: dotted 1px #777777;
-    margin: 2px 0px 10px 0px; /* top -> right -> bottom -> left */
-    clear: both;
+  width: 100%;
+  border-bottom: dotted 1px #777777;
+  margin: 2px 0px 10px 0px; /* top -> right -> bottom -> left */
+  clear: both;
 }
 
 .left_menu {
-    width: 15%;
-    float: left;
+  width: 15%;
+  float: left;
 }
 
 .content {
-    width: 90%;
-    margin: 10px auto;
+  width: 90%;
+  margin: 10px auto;
 }
 
 .content_body {
-    width: 90%;
-    margin: 10px auto;
+  width: 90%;
+  margin: 10px auto;
 }
 
 .content_body button {
-   	background-color: #555555;
+  background-color: #555555;
 }
 
 .content_body button:hover {
-   	background-color: #000000;
+  background-color: #000000;
 }
 /* 화면 내용 하단 메뉴 우측 배치 */
 .content_body_bottom {
-    clear: both;
-    margin-top: 20px;
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-    background-color: transparent; /* 배경색을 투명으로 설정 */
+  clear: both;
+  margin-top: 20px;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  background-color: transparent; /* 배경색을 투명으로 설정 */
 }
 
 .button-container {
-    display: flex; /* 버튼들을 플렉스 컨테이너로 설정 */
-    justify-content: center; /* 버튼들을 중앙에 정렬 */
-    gap: 10px; /* 버튼 사이의 간격 */
+  display: flex; /* 버튼들을 플렉스 컨테이너로 설정 */
+  justify-content: center; /* 버튼들을 중앙에 정렬 */
+  gap: 10px; /* 버튼 사이의 간격 */
 }
 
 .button-container button {
-    padding: 5px 10px; /* 버튼 크기 조정 */
-    background-color: #555555; /* 배경 색상을 파란색으로 설정 */
-    color: white; /* 버튼 텍스트 색상을 흰색으로 설정 */
-    border: none; /* 버튼 테두리 제거 */
-    border-radius: 4px; /* 버튼 모서리를 둥글게 설정 */
-    cursor: pointer; /* 커서를 포인터로 변경 */
-    font-size: 14px; /* 폰트 크기 설정 */
+  padding: 5px 10px; /* 버튼 크기 조정 */
+  background-color: #555555; /* 배경 색상을 파란색으로 설정 */
+  color: white; /* 버튼 텍스트 색상을 흰색으로 설정 */
+  border: none; /* 버튼 테두리 제거 */
+  border-radius: 4px; /* 버튼 모서리를 둥글게 설정 */
+  cursor: pointer; /* 커서를 포인터로 변경 */
+  font-size: 14px; /* 폰트 크기 설정 */
 }
 
 .button-container button:hover {
-    background-color: #000000; /* 마우스를 올리면 배경 색상을 진한 파란색으로 변경 */
+  background-color: #000000; /* 마우스를 올리면 배경 색상을 진한 파란색으로 변경 */
 }
 
 .content_bottom {
-    width: 90%;
-    margin: 10px auto;
+  width: 90%;
+  margin: 10px auto;
 }
 
 .bottom_menu {
-    text-align: center;
-    margin: 20px auto;
-    clear: both; /* 앞쪽 태그의 float 효과를 제거함. */
+  text-align: center;
+  margin: 20px auto;
+  clear: both; /* 앞쪽 태그의 float 효과를 제거함. */
 }
 
 .aside_left {
-    float: left;
-    font-size: 1.3em;
+  float: left;
+  font-size: 1.3em;
 }
 
 /** 본래의 A 태그의 크기를 제거하고 부모의 가변 크기를 사용 */
 .aside_left A {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 .aside_right {
-    float: right;
-    font-size: 0.9em; /* 부모 글꼴 크기 대비 90%로 출력 */
+  float: right;
+  font-size: 0.9em; /* 부모 글꼴 크기 대비 90%로 출력 */
 }
 
 .aside_right A {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 /* ASIDE 메뉴 세로 구분선 */
 .menu_divide {
-    /* 서브 메뉴의 세로 구분선 */
-    color: #777777;
-    font-size: 0.8em; /* 부모 글자 크기에 비해서 80%로 출력 */
-    vertical-align: 10%; /* 0%는 bottom 기준 */
+  /* 서브 메뉴의 세로 구분선 */
+  color: #777777;
+  font-size: 0.8em; /* 부모 글자 크기에 비해서 80%로 출력 */
+  vertical-align: 10%; /* 0%는 bottom 기준 */
 }
 
 .copyright {
-    margin-top: 10px;
-    border-top: solid 1px #999999;
-    text-align: center;
-    clear: both; /* 앞쪽 태그의 float 효과를 제거함. */
+  margin-top: 10px;
+  border-top: solid 1px #999999;
+  text-align: center;
+  clear: both; /* 앞쪽 태그의 float 효과를 제거함. */
 }
 
 .li_none {
-    list-style: none;
-    margin: 15px 10px;
+  list-style: none;
+  margin: 15px 10px;
 }
 
 .li_none_left {
-    text-align: left;
-    list-style: none;
-    margin: 15px 10px;
+  text-align: left;
+  list-style: none;
+  margin: 15px 10px;
 }
 
 .li_warning {
-    /* 경고 메시지 */
-    list-style: none;
-    margin: 15px 10px;
-    color: #ff6600;
+  /* 경고 메시지 */
+  list-style: none;
+  margin: 15px 10px;
+  color: #ff6600;
 }
 
 .li_error {
-    /* 에러 메시지 */
-    list-style: none;
-    margin: 15px 10px;
-    color: #ff0000;
+  /* 에러 메시지 */
+  list-style: none;
+  margin: 15px 10px;
+  color: #ff0000;
 }
 
 .li_right {
-    text-align: right;
-    list-style: none;
-    margin: 20px auto;
-    padding-right: 20px;
+  text-align: right;
+  list-style: none;
+  margin: 20px auto;
+  padding-right: 20px;
 }
 
 .fieldset_basic {
-    width: 90%;
-    margin: 10px auto;
-    border-top: none;
-    border-right: none;
-    border-bottom: none;
-    border-left: none;
-    padding: 10px;
+  width: 90%;
+  margin: 10px auto;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  padding: 10px;
 }
 
 .legend_basic {
-    margin-left: 30px;
-    border: solid 1px #999999;
-    background-color: #a6c2ff;
-    color: #ffffff;
+  margin-left: 30px;
+  border: solid 1px #999999;
+  background-color: #a6c2ff;
+  color: #ffffff;
 }
 
 .input_basic {
-    border-top: none;
-    border-right: none;
-    border-bottom: solid 1px #999999;
-    border-left: none;
-    padding-left: 2px;
+  border-top: none;
+  border-right: none;
+  border-bottom: solid 1px #999999;
+  border-left: none;
+  padding-left: 2px;
 }
 
 .textarea_basic {
-    border-top: solid 1px #999999;
-    border-right: solid 1px #999999;
-    border-bottom: solid 1px #999999;
-    border-left: solid 1px #999999;
-    padding-left: 2px;
+  border-top: solid 1px #999999;
+  border-right: solid 1px #999999;
+  border-bottom: solid 1px #999999;
+  border-left: solid 1px #999999;
+  padding-left: 2px;
 }
 
 .title_line {
-    text-align: left;
-    border-bottom: solid 3px #555555;
-    width: 100%;
-    margin: 20px auto;
-    font-size: 20px;
+  text-align: left;
+  border-bottom: solid 3px #555555;
+  width: 100%;
+  margin: 20px auto;
+  font-size: 20px;
 }
 
 .title_line_text {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .title_link:link {
-    /* 방문전 상태 */
-    font-size: 20px;
-    text-decoration: none; /* 밑줄 삭제 */
+  /* 방문전 상태 */
+  font-size: 20px;
+  text-decoration: none; /* 밑줄 삭제 */
 }
 
 .title_link:visited {
-    /* 방문후 상태 */
-    font-size: 20px;
-    text-decoration: none; /* 밑줄 삭제 */
+  /* 방문후 상태 */
+  font-size: 20px;
+  text-decoration: none; /* 밑줄 삭제 */
 }
 
 .title_link:hover {
-    /* A 태그에 마우스가 올라간 상태 */
-    font-size: 20px;
-    text-decoration: none; /* 밑줄 삭제 */
+  /* A 태그에 마우스가 올라간 상태 */
+  font-size: 20px;
+  text-decoration: none; /* 밑줄 삭제 */
 }
 
 .title_link:active {
-    /* A 태그를 클릭한 상태 */
-    font-size: 20px;
-    text-decoration: none; /* 밑줄 삭제 */
+  /* A 태그를 클릭한 상태 */
+  font-size: 20px;
+  text-decoration: none; /* 밑줄 삭제 */
 }
 
 .sub_menu {
-    text-align: right;
-    width: 100%;
+  text-align: right;
+  width: 100%;
 }
 
 .table_basic {
-    border-collapse: collapse;
-    margin: 2px auto;
-    width: 100%;
+  border-collapse: collapse;
+  margin: 2px auto;
+  width: 100%;
 }
 
 /* 1em 기본값 : 16px, 주변 태그의 글자크기를 1em으로 인식
@@ -325,321 +332,321 @@
       DIV 태그가 20px 일경우 자식태그가 1.5em이면 최종적으로 30px이 적용됨.
   */
 .th_basic {
-    font-size: 0.8em;
-    border-bottom: solid 3px #dddddd;
+  font-size: 0.8em;
+  border-bottom: solid 3px #dddddd;
 }
 
 .th_bs {
-    text-align: center;
+  text-align: center;
 }
 
 .td_basic {
-    border-top: none;
-    border-right: none;
-    border-bottom: solid 1px #dddddd;
-    border-left: none;
-    text-align: center;
+  border-top: none;
+  border-right: none;
+  border-bottom: solid 1px #dddddd;
+  border-left: none;
+  text-align: center;
 }
 
 .td_left {
-    border-top: none;
-    border-right: none;
-    border-bottom: solid 1px #dddddd;
-    border-left: none;
-    text-align: left;
+  border-top: none;
+  border-right: none;
+  border-bottom: solid 1px #dddddd;
+  border-left: none;
+  text-align: left;
 }
 
 .td_bs {
-    text-align: center;
-    vertical-align: middle;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .td_bs_left {
-    text-align: left;
-    vertical-align: middle;
+  text-align: left;
+  vertical-align: middle;
 }
 
 a:link {
-    /* 방문전 상태 */
-    text-decoration: none; /* 밑줄 삭제 */
-    color: #555555;
+  /* 방문전 상태 */
+  text-decoration: none; /* 밑줄 삭제 */
+  color: #555555;
 }
 
 a:visited {
-    /* 방문후 상태 */
-    text-decoration: none; /* 밑줄 삭제 */
-    color: #555555;
+  /* 방문후 상태 */
+  text-decoration: none; /* 밑줄 삭제 */
+  color: #555555;
 }
 
 a:hover {
-    /* A 태그에 마우스가 올라간 상태 */
-    text-decoration: underline; /* 밑줄 출력 */
-    color: #7777ff;
+  /* A 태그에 마우스가 올라간 상태 */
+  text-decoration: underline; /* 밑줄 출력 */
+  color: #7777ff;
 }
 
 a:active {
-    /* A 태그를 클릭한 상태 */
-    text-decoration: underline; /* 밑줄 출력 */
-    color: #555555;
+  /* A 태그를 클릭한 상태 */
+  text-decoration: underline; /* 밑줄 출력 */
+  color: #555555;
 }
 
 .menu_link:link {
-    /* 방문전 상태 */
-    text-decoration: none; /* 밑줄 삭제 */
-    color: white;
+  /* 방문전 상태 */
+  text-decoration: none; /* 밑줄 삭제 */
+  color: white;
 }
 
 .menu_link:visited {
-    /* 방문후 상태 */
-    text-decoration: none; /* 밑줄 삭제 */
-    color: white;
+  /* 방문후 상태 */
+  text-decoration: none; /* 밑줄 삭제 */
+  color: white;
 }
 
 .menu_link:hover {
-    /* A 태그에 마우스가 올라간 상태 */
-    text-decoration: underline; /* 밑줄 출력 */
-    color: white;
+  /* A 태그에 마우스가 올라간 상태 */
+  text-decoration: underline; /* 밑줄 출력 */
+  color: white;
 }
 
 .menu_link:active {
-    /* A 태그를 클릭한 상태 */
-    text-decoration: underline; /* 밑줄 출력 */
-    color: white;
+  /* A 태그를 클릭한 상태 */
+  text-decoration: underline; /* 밑줄 출력 */
+  color: white;
 }
 
 .recom_link:link {
-    /* 방문전 상태 */
-    text-decoration: none; /* 밑줄 삭제 */
-    color: #555555;
-    font-size: 0.8em;
+  /* 방문전 상태 */
+  text-decoration: none; /* 밑줄 삭제 */
+  color: #555555;
+  font-size: 0.8em;
 }
 
 .recom_link:visited {
-    /* 방문후 상태 */
-    text-decoration: none; /* 밑줄 삭제 */
-    color: #555555;
-    font-size: 0.8em;
+  /* 방문후 상태 */
+  text-decoration: none; /* 밑줄 삭제 */
+  color: #555555;
+  font-size: 0.8em;
 }
 
 .recom_link:hover {
-    /* A 태그에 마우스가 올라간 상태 */
-    text-decoration: none; /* 밑줄 출력 */
-    color: #7777ff;
-    font-size: 0.8em;
+  /* A 태그에 마우스가 올라간 상태 */
+  text-decoration: none; /* 밑줄 출력 */
+  color: #7777ff;
+  font-size: 0.8em;
 }
 
 .recom_link:active {
-    /* A 태그를 클릭한 상태 */
-    text-decoration: none; /* 밑줄 출력 */
-    color: #7777ff;
-    font-size: 0.8em;
+  /* A 태그를 클릭한 상태 */
+  text-decoration: none; /* 밑줄 출력 */
+  color: #7777ff;
+  font-size: 0.8em;
 }
 
 .content_title {
-    border-top: none;
-    border-right: none;
-    border-bottom: solid 1px #dddddd;
-    border-left: none;
-    margin-bottom: 20px;
+  border-top: none;
+  border-right: none;
+  border-bottom: solid 1px #dddddd;
+  border-left: none;
+  margin-bottom: 20px;
 }
 
 .content_bottom {
-    border-top: none;
-    border-right: none;
-    border-bottom: none;
-    border-left: none;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: right;
-    font-size: 0.9em;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: right;
+  font-size: 0.9em;
 }
 
 .li_left_menu_1 {
-    /* 화면 좌측 대분류 */
-    list-style: none;
-    margin-top: 25px;
-    background: url(/css/images/li_left_menu_1.png) left center no-repeat;
-    background-size: 16px;
-    padding-left: 25px;
-    line-height: 15px;
+  /* 화면 좌측 대분류 */
+  list-style: none;
+  margin-top: 25px;
+  background: url(/css/images/li_left_menu_1.png) left center no-repeat;
+  background-size: 16px;
+  padding-left: 25px;
+  line-height: 15px;
 }
 
 .li_left_menu_2 {
-    /* 화면 좌측 중분류 */
-    list-style: none;
-    margin: 15px 10px;
-    background: url(/css/images/li_left_menu_2.png) left center no-repeat;
-    background-size: 16px;
-    padding-left: 25px;
-    line-height: 15px;
+  /* 화면 좌측 중분류 */
+  list-style: none;
+  margin: 15px 10px;
+  background: url(/css/images/li_left_menu_2.png) left center no-repeat;
+  background-size: 16px;
+  padding-left: 25px;
+  line-height: 15px;
 }
 
 .label_basic {
-    width: 200px;
-    background-color: #99cc00;
-    color: #ffffff;
-    font-weight: normal;
-    display: inline-block; /* DIV 태그처럼 한줄의 영역을 블럭 영역으로 확장 표시 */
-    text-align: right;
-    padding-right: 10px;
+  width: 200px;
+  background-color: #99cc00;
+  color: #ffffff;
+  font-weight: normal;
+  display: inline-block; /* DIV 태그처럼 한줄의 영역을 블럭 영역으로 확장 표시 */
+  text-align: right;
+  padding-right: 10px;
 }
 
 /* 기타 메시지 */
 .message {
-    font-weight: bold;
-    width: 70%;
-    border: none;
-    margin: 30px auto;
-    text-align: center;
-    background-color: #fafafa;
-    padding: 30px;
+  font-weight: bold;
+  width: 70%;
+  border: none;
+  margin: 30px auto;
+  text-align: center;
+  background-color: #fafafa;
+  padding: 30px;
 }
 
 /* 알림 메시지 */
 .span_info {
-    color: #ffffff;
-    background-color: rgba(0, 150, 0, 0.6);
-    padding: 2px;
-    margin-top: 2px;
+  color: #ffffff;
+  background-color: rgba(0, 150, 0, 0.6);
+  padding: 2px;
+  margin-top: 2px;
 }
 
 /* 주의 메시지 */
 .span_alert {
-    font-weight: bold;
-    color: #ffffff;
-    background-color: rgba(0, 0, 200, 0.6);
-    padding: 2px;
-    margin-top: 2px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: rgba(0, 0, 200, 0.6);
+  padding: 2px;
+  margin-top: 2px;
 }
 
 /* 경고 메시지
       background-color: rgba(255, 0, 0, 0.6); */
 .span_warning {
-    font-weight: bold;
-    color: #ff0000;
-    padding: 2px;
-    margin-top: 2px;
+  font-weight: bold;
+  color: #ff0000;
+  padding: 2px;
+  margin-top: 2px;
 }
 
 .msg_warning {
-    font-weight: bold;
-    color: #ff0000;
-    padding: 2px;
-    margin: 10px auto;
-    text-align: center;
-    width: 80%;
-    margin-top: 2px;
+  font-weight: bold;
+  color: #ff0000;
+  padding: 2px;
+  margin: 10px auto;
+  text-align: center;
+  width: 80%;
+  margin-top: 2px;
 }
 
 /* 처리 성공 메시지 */
 .span_success {
-    font-weight: bold;
-    background: url('/css/images/url5.png') left center no-repeat;
-    background-size: 10px;
-    padding-top: 0px;
-    padding-left: 20px;
-    margin-top: 2px;
+  font-weight: bold;
+  background: url("/css/images/url5.png") left center no-repeat;
+  background-size: 10px;
+  padding-top: 0px;
+  padding-left: 20px;
+  margin-top: 2px;
 }
 
 /* 처리 실패 메시지 */
 .span_fail {
-    font-weight: bold;
-    background: url('/css/images/url8.png') left center no-repeat;
-    background-size: 10px;
-    padding-top: 0px;
-    padding-left: 20px;
-    margin-top: 2px;
+  font-weight: bold;
+  background: url("/css/images/url8.png") left center no-repeat;
+  background-size: 10px;
+  padding-top: 0px;
+  padding-left: 20px;
+  margin-top: 2px;
 }
 
 .cart_label {
-    width: 50%;
-    text-align: left;
-    float: left;
-    font-size: 1.5em;
+  width: 50%;
+  text-align: left;
+  float: left;
+  font-size: 1.5em;
 }
 .cart_price {
-    width: 50%;
-    text-align: right;
-    float: left;
-    font-size: 1.5em;
+  width: 50%;
+  text-align: right;
+  float: left;
+  font-size: 1.5em;
 }
 
 .icon {
-    width: 16px;
+  width: 16px;
 }
 
 .form_input {
-    margin-top: 5px;
-    margin-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .form_input_bottom {
-    margin-top: 15px;
-    margin-bottom: 5px;
-    text-align: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 .display_table {
-    color: #ffffff;
-    background-color: #ffffff;
-    width: 50%;
-    height: 200px;
-    margin: 0px auto;
-    text-align: center;
-    padding: 0px;
-    display: table;
+  color: #ffffff;
+  background-color: #ffffff;
+  width: 50%;
+  height: 200px;
+  margin: 0px auto;
+  text-align: center;
+  padding: 0px;
+  display: table;
 }
 
 .display_table_cell {
-    color: #000000;
-    background-color: #ffffff;
-    display: table-cell;
-    vertical-align: middle;
+  color: #000000;
+  background-color: #ffffff;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .form-group1 {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 10px;
 }
 
 .form-group1 label {
-    flex: 0 0 30%;
-    text-align: left;
-    margin-right: -140px;
-    margin-left: 160px;
+  flex: 0 0 30%;
+  text-align: left;
+  margin-right: -140px;
+  margin-left: 160px;
 }
 
 .form-group1 input {
-    flex: 0 0 40%;
+  flex: 0 0 40%;
 }
 .form-group1 button {
-    flex: 0 0 15%;
-    background-color: #555555;
-     border: none; /* 테두리를 없앰 */
+  flex: 0 0 15%;
+  background-color: #555555;
+  border: none; /* 테두리를 없앰 */
 }
 
 .form-group1 button:hover {
-    flex: 0 0 15%;
-    background-color: #000000;
-     border: none; /* 테두리를 없앰 */
+  flex: 0 0 15%;
+  background-color: #000000;
+  border: none; /* 테두리를 없앰 */
 }
 
 .form-group1 button:active {
-    flex: 0 0 15%;
-    background-color: rgba(140, 145, 145, 0.304);
-     border: none; /* 테두리를 없앰 */
+  flex: 0 0 15%;
+  background-color: rgba(140, 145, 145, 0.304);
+  border: none; /* 테두리를 없앰 */
 }
 .phone-input {
-    flex: 0 0 40%;
-    display: flex;
-    align-items: center;
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
 }
 
 .phone-input input {
-    flex: 1;
-    margin-right: 5px;
+  flex: 1;
+  margin-right: 5px;
 }
 
 /* General Styles */
@@ -647,114 +654,119 @@ a:active {
 templates.member의 list.html
 */
 body {
-    /* font-family: 'Arial', sans-serif; */ /* 기본 글꼴 설정 */
-    background-color: #f8f9fa; /* 배경 색상을 연한 회색으로 설정 */
-    color: #555555; /* 글자 색상을 어두운 회색으로 설정 */
-    margin: 0; /* 기본 마진을 0으로 설정 */
-    padding: 0; /* 기본 패딩을 0으로 설정 */
-    line-height: 1.6; /* 줄 간격을 1.6으로 설정 */
+  /* font-family: 'Arial', sans-serif; */ /* 기본 글꼴 설정 */
+  background-color: #f8f9fa; /* 배경 색상을 연한 회색으로 설정 */
+  color: #555555; /* 글자 색상을 어두운 회색으로 설정 */
+  margin: 0; /* 기본 마진을 0으로 설정 */
+  padding: 0; /* 기본 패딩을 0으로 설정 */
+  line-height: 1.6; /* 줄 간격을 1.6으로 설정 */
 }
 
 /* 제목 스타일 설정 */
 .title_line {
-    font-size: 1.5em; /* 글자 크기를 1.5배로 설정 */
-    font-weight: bold; /* 글자를 굵게 설정 */
-    /* margin: 20px 0;     */ /* 위아래 마진을 20px로 설정 */
-    /* text-align: center;   */ /* 텍스트를 중앙 정렬 */
-    color: #555555; /* 글자 색상을 파란색으로 설정 */
+  font-size: 1.5em; /* 글자 크기를 1.5배로 설정 */
+  font-weight: bold; /* 글자를 굵게 설정 */
+  /* margin: 20px 0;     */ /* 위아래 마진을 20px로 설정 */
+  /* text-align: center;   */ /* 텍스트를 중앙 정렬 */
+  color: #555555; /* 글자 색상을 파란색으로 설정 */
 }
 
 /* Header Styles */
 /* 오른쪽 사이드 메뉴 스타일 설정 */
 .aside_right {
-    text-align: right; /* 텍스트를 오른쪽 정렬 */
-    padding: 10px 20px; /* 위아래 패딩 10px, 좌우 패딩 20px 설정 */
+  text-align: right; /* 텍스트를 오른쪽 정렬 */
+  padding: 10px 20px; /* 위아래 패딩 10px, 좌우 패딩 20px 설정 */
 }
 
 /* 오른쪽 사이드 메뉴의 링크 스타일 설정 */
 .aside_right a {
-    text-decoration: none; /* 링크의 밑줄 제거 */
-    color: #555555; /* 링크 글자 색상을 파란색으로 설정 */
-    margin: 0 10px; /* 좌우 마진을 10px로 설정 */
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  color: #555555; /* 링크 글자 색상을 파란색으로 설정 */
+  margin: 0 10px; /* 좌우 마진을 10px로 설정 */
 }
 
 .aside_right a:hover {
-    color: #000000; /* 링크에 마우스를 올리면 진한 파란색으로 변경 */
+  color: #000000; /* 링크에 마우스를 올리면 진한 파란색으로 변경 */
 }
 
 /* 메뉴 구분선 색상 설정 */
 .menu_divide {
-    color: #ccc; /* 구분선 색상을 연한 회색으로 설정 */
+  color: #ccc; /* 구분선 색상을 연한 회색으로 설정 */
 }
 
 /* Table Styles */
 /* 테이블 기본 스타일 설정 */
 .table {
-    width: 100%; /* 테이블 너비를 100%로 설정 */
-    border-collapse: collapse; /* 테두리 겹침을 없애기 위해 collapse 설정 */
-    margin: 20px 0; /* 위아래 마진을 20px로 설정 */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+  width: 100%; /* 테이블 너비를 100%로 설정 */
+  border-collapse: collapse; /* 테두리 겹침을 없애기 위해 collapse 설정 */
+  margin: 20px 0; /* 위아래 마진을 20px로 설정 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
 }
 
 /* 테이블 헤더와 셀 스타일 설정 */
 .table th,
 .table td {
-    padding: 12px 15px; /* 패딩을 12px 15px로 설정 */
-    border: 1px solid #ddd; /* 연한 회색 테두리 설정 */
-    text-align: left; /* 텍스트를 왼쪽 정렬 */
+  padding: 12px 15px; /* 패딩을 12px 15px로 설정 */
+  border: 1px solid #ddd; /* 연한 회색 테두리 설정 */
+  text-align: left; /* 텍스트를 왼쪽 정렬 */
 }
 
 /* 테이블 헤더 스타일 설정 */
 .table th {
-    background-color: rgba(179, 145, 145, 0.304); /* 헤더 배경 색상을 파란색으로 설정 */
-    color: white; /* 헤더 글자 색상을 흰색으로 설정 */
-    text-transform: uppercase; /* 헤더 글자를 대문자로 변환 */
-    letter-spacing: 1px; /* 글자 간격을 1px로 설정 */
+  background-color: rgba(
+    179,
+    145,
+    145,
+    0.304
+  ); /* 헤더 배경 색상을 파란색으로 설정 */
+  color: white; /* 헤더 글자 색상을 흰색으로 설정 */
+  text-transform: uppercase; /* 헤더 글자를 대문자로 변환 */
+  letter-spacing: 1px; /* 글자 간격을 1px로 설정 */
 }
 
 /* 홀수 행 배경 색상 설정 */
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #f9f9f9; /* 홀수 행 배경 색상을 연한 회색으로 설정 */
+  background-color: #f9f9f9; /* 홀수 행 배경 색상을 연한 회색으로 설정 */
 }
 
 /* 기본 셀 텍스트 가운데 정렬 */
 .td_basic {
-    text-align: center; /* 텍스트를 가운데 정렬 */
+  text-align: center; /* 텍스트를 가운데 정렬 */
 }
 
 /* 왼쪽 정렬 셀 스타일 설정 */
 .td_left {
-    text-align: left; /* 텍스트를 왼쪽 정렬 */
+  text-align: left; /* 텍스트를 왼쪽 정렬 */
 }
 
 /* 아이콘 이미지 크기 설정 */
 .td_basic img.icon {
-    width: 20px; /* 아이콘 너비를 20px로 설정 */
-    height: 20px; /* 아이콘 높이를 20px로 설정 */
+  width: 20px; /* 아이콘 너비를 20px로 설정 */
+  height: 20px; /* 아이콘 높이를 20px로 설정 */
 }
 
 /* Bottom Menu Styles */
 /* 하단 메뉴 스타일 설정 */
 .bottom_menu {
-    text-align: center; /* 텍스트를 중앙 정렬 */
-    margin: 20px 0; /* 위아래 마진을 20px로 설정 */
+  text-align: center; /* 텍스트를 중앙 정렬 */
+  margin: 20px 0; /* 위아래 마진을 20px로 설정 */
 }
 
 #paging span {
-    background-color: #555555; /* 원하는 배경색으로 설정 */
+  background-color: #555555; /* 원하는 배경색으로 설정 */
 }
 /* 버튼 스타일 설정 */
 .bottom_menu button {
-    background-color: #555555;/* 배경 색상을 파란색으로 설정 */
-    color: white; /* 글자 색상을 흰색으로 설정 */
-    border: none; /* 테두리를 없앰 */
-    padding: 10px 20px; /* 패딩을 10px 20px로 설정 */
-    cursor: pointer; /* 커서를 포인터로 변경 */
-    font-size: 14px; /* 폰트 크기를 14px로 설정 */
-    border-radius: 5px; /* 테두리 반경을 5px로 설정 */
-    transition: background-color 0.3s ease; /* 배경 색상 변화를 0.3초 동안 부드럽게 */
+  background-color: #555555; /* 배경 색상을 파란색으로 설정 */
+  color: white; /* 글자 색상을 흰색으로 설정 */
+  border: none; /* 테두리를 없앰 */
+  padding: 10px 20px; /* 패딩을 10px 20px로 설정 */
+  cursor: pointer; /* 커서를 포인터로 변경 */
+  font-size: 14px; /* 폰트 크기를 14px로 설정 */
+  border-radius: 5px; /* 테두리 반경을 5px로 설정 */
+  transition: background-color 0.3s ease; /* 배경 색상 변화를 0.3초 동안 부드럽게 */
 }
 
 .bottom_menu button:hover {
-    background-color: #000000; /* 마우스를 올리면 배경 색상을 진한 파란색으로 변경 */
+  background-color: #000000; /* 마우스를 올리면 배경 색상을 진한 파란색으로 변경 */
 }
