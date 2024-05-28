@@ -125,6 +125,13 @@
     margin: 10px auto;
 }
 
+.content_body button {
+   	background-color: #555555;
+}
+
+.content_body button:hover {
+   	background-color: #000000;
+}
 /* 화면 내용 하단 메뉴 우측 배치 */
 .content_body_bottom {
     clear: both;
@@ -143,7 +150,7 @@
 
 .button-container button {
     padding: 5px 10px; /* 버튼 크기 조정 */
-    background-color: rgb(0, 0, 255); /* 배경 색상을 파란색으로 설정 */
+    background-color: #555555; /* 배경 색상을 파란색으로 설정 */
     color: white; /* 버튼 텍스트 색상을 흰색으로 설정 */
     border: none; /* 버튼 테두리 제거 */
     border-radius: 4px; /* 버튼 모서리를 둥글게 설정 */
@@ -152,7 +159,7 @@
 }
 
 .button-container button:hover {
-    background-color: rgb(0, 0, 160); /* 마우스를 올리면 배경 색상을 진한 파란색으로 변경 */
+    background-color: #000000; /* 마우스를 올리면 배경 색상을 진한 파란색으로 변경 */
 }
 
 .content_bottom {
@@ -373,7 +380,7 @@ a:hover {
 a:active {
     /* A 태그를 클릭한 상태 */
     text-decoration: underline; /* 밑줄 출력 */
-    color: #7777ff;
+    color: #555555;
 }
 
 .menu_link:link {
@@ -609,8 +616,21 @@ a:active {
 }
 .form-group1 button {
     flex: 0 0 15%;
+    background-color: #555555;
+     border: none; /* 테두리를 없앰 */
 }
 
+.form-group1 button:hover {
+    flex: 0 0 15%;
+    background-color: #000000;
+     border: none; /* 테두리를 없앰 */
+}
+
+.form-group1 button:active {
+    flex: 0 0 15%;
+    background-color: rgba(140, 145, 145, 0.304);
+     border: none; /* 테두리를 없앰 */
+}
 .phone-input {
     flex: 0 0 40%;
     display: flex;
@@ -629,7 +649,7 @@ templates.member의 list.html
 body {
     /* font-family: 'Arial', sans-serif; */ /* 기본 글꼴 설정 */
     background-color: #f8f9fa; /* 배경 색상을 연한 회색으로 설정 */
-    color: #333; /* 글자 색상을 어두운 회색으로 설정 */
+    color: #555555; /* 글자 색상을 어두운 회색으로 설정 */
     margin: 0; /* 기본 마진을 0으로 설정 */
     padding: 0; /* 기본 패딩을 0으로 설정 */
     line-height: 1.6; /* 줄 간격을 1.6으로 설정 */
@@ -641,7 +661,7 @@ body {
     font-weight: bold; /* 글자를 굵게 설정 */
     /* margin: 20px 0;     */ /* 위아래 마진을 20px로 설정 */
     /* text-align: center;   */ /* 텍스트를 중앙 정렬 */
-    color: #007bff; /* 글자 색상을 파란색으로 설정 */
+    color: #555555; /* 글자 색상을 파란색으로 설정 */
 }
 
 /* Header Styles */
@@ -654,12 +674,12 @@ body {
 /* 오른쪽 사이드 메뉴의 링크 스타일 설정 */
 .aside_right a {
     text-decoration: none; /* 링크의 밑줄 제거 */
-    color: #007bff; /* 링크 글자 색상을 파란색으로 설정 */
+    color: #555555; /* 링크 글자 색상을 파란색으로 설정 */
     margin: 0 10px; /* 좌우 마진을 10px로 설정 */
 }
 
 .aside_right a:hover {
-    color: #0056b3; /* 링크에 마우스를 올리면 진한 파란색으로 변경 */
+    color: #000000; /* 링크에 마우스를 올리면 진한 파란색으로 변경 */
 }
 
 /* 메뉴 구분선 색상 설정 */
@@ -686,7 +706,7 @@ body {
 
 /* 테이블 헤더 스타일 설정 */
 .table th {
-    background-color: #007bff; /* 헤더 배경 색상을 파란색으로 설정 */
+    background-color: rgba(179, 145, 145, 0.304); /* 헤더 배경 색상을 파란색으로 설정 */
     color: white; /* 헤더 글자 색상을 흰색으로 설정 */
     text-transform: uppercase; /* 헤더 글자를 대문자로 변환 */
     letter-spacing: 1px; /* 글자 간격을 1px로 설정 */
@@ -720,9 +740,12 @@ body {
     margin: 20px 0; /* 위아래 마진을 20px로 설정 */
 }
 
+#paging span {
+    background-color: #555555; /* 원하는 배경색으로 설정 */
+}
 /* 버튼 스타일 설정 */
 .bottom_menu button {
-    background-color: #007bff; /* 배경 색상을 파란색으로 설정 */
+    background-color: #555555;/* 배경 색상을 파란색으로 설정 */
     color: white; /* 글자 색상을 흰색으로 설정 */
     border: none; /* 테두리를 없앰 */
     padding: 10px 20px; /* 패딩을 10px 20px로 설정 */
@@ -733,5 +756,5 @@ body {
 }
 
 .bottom_menu button:hover {
-    background-color: #0056b3; /* 마우스를 올리면 배경 색상을 진한 파란색으로 변경 */
+    background-color: #000000; /* 마우스를 올리면 배경 색상을 진한 파란색으로 변경 */
 }
