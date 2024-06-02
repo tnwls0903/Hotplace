@@ -684,6 +684,8 @@ public class ContentsCont {
    ArrayList<CategoryVOMenu> menu = this.categoryProcess.menu();
    model.addAttribute("menu", menu);
    
+   System.out.println("contentsno ---->>" + contentsno);
+   
    if (memberProc.isMemberAdmin(session)) { // 관리자로 로그인한경우
      ContentsVO contentsVO = this.contentsProc.read(contentsno);
      model.addAttribute("contentsVO", contentsVO);
@@ -694,7 +696,7 @@ public class ContentsCont {
      model.addAttribute("categoryVO", categoryVO);
      
      
-     return "/contents/delete";
+     return "contents/delete";
    } else {
      ra.addAttribute("url", "/member/login_cookie_need");
      return "redirect:/contents/msg"; 
@@ -718,7 +720,6 @@ public class ContentsCont {
    // -------------------------------------------------------------------
    // 삭제할 파일 정보를 읽어옴.
    ContentsVO contentsVO_read = contentsProc.read(contentsno);
-       
    String file1saved = contentsVO_read.getFile1saved();
    String thumb1 = contentsVO_read.getThumb1();
    

@@ -1,5 +1,5 @@
--- /src/main/webapp/WEB-INF/doc/ì»¨í…ì¸ /contents_c.sql
-DROP TABLE contents CASCADE CONSTRAINTS; -- ìì‹ ë¬´ì‹œí•˜ê³  ì‚­ì œ ê°€ëŠ¥
+-- /src/main/webapp/WEB-INF/doc/ì»¨í…ì¸?/contents_c.sql
+DROP TABLE contents CASCADE CONSTRAINTS; -- ??‹ ë¬´ì‹œ?•˜ê³? ?‚­? œ ê°??Š¥
 DROP TABLE contents;
 
 CREATE TABLE contents(
@@ -14,10 +14,10 @@ CREATE TABLE contents(
         passwd                                VARCHAR2(15)         NOT NULL,
         word                                  VARCHAR2(100)         NULL ,
         rdate                                 DATE               NOT NULL,
-        file1                                   VARCHAR(100)          NULL,  -- ì›ë³¸ íŒŒì¼ëª… image
-        file1saved                            VARCHAR(100)          NULL,  -- ì €ì¥ëœ íŒŒì¼ëª…, image
+        file1                                   VARCHAR(100)          NULL,  -- ?›ë³? ?ŒŒ?¼ëª? image
+        file1saved                            VARCHAR(100)          NULL,  -- ???¥?œ ?ŒŒ?¼ëª?, image
         thumb1                              VARCHAR(100)          NULL,   -- preview image
-        size1                                 NUMBER(10)      DEFAULT 0 NULL,  -- íŒŒì¼ ì‚¬ì´ì¦ˆ
+        size1                                 NUMBER(10)      DEFAULT 0 NULL,  -- ?ŒŒ?¼ ?‚¬?´ì¦?
         price                                 NUMBER(10)      DEFAULT 0 NULL,  
         dc                                    NUMBER(10)      DEFAULT 0 NULL,  
         saleprice                            NUMBER(10)      DEFAULT 0 NULL,  
@@ -30,91 +30,97 @@ CREATE TABLE contents(
         FOREIGN KEY (cateno) REFERENCES cate (cateno)
 );
 
-COMMENT ON TABLE contents is 'ì»¨í…ì¸  - ìˆœë¡€ê¸¸';
-COMMENT ON COLUMN contents.contentsno is 'ì»¨í…ì¸  ë²ˆí˜¸';
-COMMENT ON COLUMN contents.memberno is 'ê´€ë¦¬ì ë²ˆí˜¸';
+COMMENT ON TABLE contents is 'ì»¨í…ì¸? - ?ˆœë¡?ê¸?';
+COMMENT ON COLUMN contents.contentsno is 'ì»¨í…ì¸? ë²ˆí˜¸';
+COMMENT ON COLUMN contents.memberno is 'ê´?ë¦¬ì ë²ˆí˜¸';
 COMMENT ON COLUMN contents.cateno is 'ì¹´í…Œê³ ë¦¬ ë²ˆí˜¸';
-COMMENT ON COLUMN contents.title is 'ì œëª©';
-COMMENT ON COLUMN contents.content is 'ë‚´ìš©';
-COMMENT ON COLUMN contents.recom is 'ì¶”ì²œìˆ˜';
-COMMENT ON COLUMN contents.cnt is 'ì¡°íšŒìˆ˜';
-COMMENT ON COLUMN contents.replycnt is 'ëŒ“ê¸€ìˆ˜';
-COMMENT ON COLUMN contents.passwd is 'íŒ¨ìŠ¤ì›Œë“œ';
-COMMENT ON COLUMN contents.word is 'ê²€ìƒ‰ì–´';
-COMMENT ON COLUMN contents.rdate is 'ë“±ë¡ì¼';
-COMMENT ON COLUMN contents.file1 is 'ë©”ì¸ ì´ë¯¸ì§€';
-COMMENT ON COLUMN contents.file1saved is 'ì‹¤ì œ ì €ì¥ëœ ë©”ì¸ ì´ë¯¸ì§€';
-COMMENT ON COLUMN contents.thumb1 is 'ë©”ì¸ ì´ë¯¸ì§€ Preview';
-COMMENT ON COLUMN contents.size1 is 'ë©”ì¸ ì´ë¯¸ì§€ í¬ê¸°';
-COMMENT ON COLUMN contents.price is 'ì •ê°€';
-COMMENT ON COLUMN contents.dc is 'í• ì¸ë¥ ';
-COMMENT ON COLUMN contents.saleprice is 'íŒë§¤ê°€';
-COMMENT ON COLUMN contents.point is 'í¬ì¸íŠ¸';
-COMMENT ON COLUMN contents.salecnt is 'ì¬ê³  ìˆ˜ëŸ‰';
-COMMENT ON COLUMN contents.map is 'ì§€ë„';
-COMMENT ON COLUMN contents.youtube is 'Youtube ì˜ìƒ';
-COMMENT ON COLUMN contents.mp4 is 'ì˜ìƒ';
+COMMENT ON COLUMN contents.title is '? œëª?';
+COMMENT ON COLUMN contents.content is '?‚´?š©';
+COMMENT ON COLUMN contents.recom is 'ì¶”ì²œ?ˆ˜';
+COMMENT ON COLUMN contents.cnt is 'ì¡°íšŒ?ˆ˜';
+COMMENT ON COLUMN contents.replycnt is '?Œ“ê¸??ˆ˜';
+COMMENT ON COLUMN contents.passwd is '?Œ¨?Š¤?›Œ?“œ';
+COMMENT ON COLUMN contents.word is 'ê²??ƒ‰?–´';
+COMMENT ON COLUMN contents.rdate is '?“±ë¡ì¼';
+COMMENT ON COLUMN contents.file1 is 'ë©”ì¸ ?´ë¯¸ì?';
+COMMENT ON COLUMN contents.file1saved is '?‹¤? œ ???¥?œ ë©”ì¸ ?´ë¯¸ì?';
+COMMENT ON COLUMN contents.thumb1 is 'ë©”ì¸ ?´ë¯¸ì? Preview';
+COMMENT ON COLUMN contents.size1 is 'ë©”ì¸ ?´ë¯¸ì? ?¬ê¸?';
+COMMENT ON COLUMN contents.price is '? •ê°?';
+COMMENT ON COLUMN contents.dc is '?• ?¸ë¥?';
+COMMENT ON COLUMN contents.saleprice is '?Œë§¤ê?';
+COMMENT ON COLUMN contents.point is '?¬?¸?Š¸';
+COMMENT ON COLUMN contents.salecnt is '?¬ê³? ?ˆ˜?Ÿ‰';
+COMMENT ON COLUMN contents.map is 'ì§??„';
+COMMENT ON COLUMN contents.youtube is 'Youtube ?˜?ƒ';
+COMMENT ON COLUMN contents.mp4 is '?˜?ƒ';
 
 DROP SEQUENCE contents_seq;
 
 CREATE SEQUENCE contents_seq
-  START WITH 1                -- ì‹œì‘ ë²ˆí˜¸
-  INCREMENT BY 1            -- ì¦ê°€ê°’
-  MAXVALUE 9999999999  -- ìµœëŒ€ê°’: 9999999999 --> NUMBER(10) ëŒ€ì‘
-  CACHE 2                        -- 2ë²ˆì€ ë©”ëª¨ë¦¬ì—ì„œë§Œ ê³„ì‚°
-  NOCYCLE;                      -- ë‹¤ì‹œ 1ë¶€í„° ìƒì„±ë˜ëŠ” ê²ƒì„ ë°©ì§€
+  START WITH 1                -- ?‹œ?‘ ë²ˆí˜¸
+  INCREMENT BY 1            -- ì¦ê?ê°?
+  MAXVALUE 9999999999  -- ìµœë?ê°?: 9999999999 --> NUMBER(10) ???‘
+  CACHE 2                        -- 2ë²ˆì? ë©”ëª¨ë¦¬ì—?„œë§? ê³„ì‚°
+  NOCYCLE;                      -- ?‹¤?‹œ 1ë¶??„° ?ƒ?„±?˜?Š” ê²ƒì„ ë°©ì?
 
--- ë“±ë¡ í™”ë©´ ìœ í˜• 1: ì»¤ë®¤ë‹ˆí‹°(ê³µì§€ì‚¬í•­, ê²Œì‹œíŒ, ìë£Œì‹¤, ê°¤ëŸ¬ë¦¬,  Q/A...)ê¸€ ë“±ë¡
+-- ?“±ë¡? ?™”ë©? ?œ ?˜• 1: ì»¤ë?¤ë‹ˆ?‹°(ê³µì??‚¬?•­, ê²Œì‹œ?Œ, ?ë£Œì‹¤, ê°¤ëŸ¬ë¦?,  Q/A...)ê¸? ?“±ë¡?
 INSERT INTO contents(contentsno, memberno, cateno, title, content, recom, cnt, replycnt, passwd, 
                      word, rdate, file1, file1saved, thumb1, size1)
-VALUES(contents_seq.nextval, 1, 1, 'ì²­ê³„ì²œ ë§¤í™” ê±°ë¦¬', 'ì œê¸°ë™ì—­ì—ì„œ ê°€ê¹Œì›€ ëª…í’ˆ ì‚°ì±…ë¡œ', 0, 0, 0, '123',
-       'ì‚°ì±…', sysdate, 'space.jpg', 'space_1.jpg', 'space_t.jpg', 1000);
+VALUES(contents_seq.nextval, 1, 1, 'ì²?ê³„ì²œ ë§¤í™” ê±°ë¦¬', '? œê¸°ë™?—­?—?„œ ê°?ê¹Œì? ëª…í’ˆ ?‚°ì±…ë¡œ', 0, 0, 0, '123',
+       '?‚°ì±?', sysdate, 'space.jpg', 'space_1.jpg', 'space_t.jpg', 1000);
 
--- ìœ í˜• 1 ì „ì²´ ëª©ë¡
+-- ?œ ?˜• 1 ? „ì²? ëª©ë¡
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, passwd, word, rdate,
            file1, file1saved, thumb1, size1
 FROM contents
 ORDER BY contentsno DESC;
 
--- ìœ í˜• 2 ì¹´í…Œê³ ë¦¬ë³„ ëª©ë¡
+SELECT contentsno, title, content, word, rdate
+FROM contents
+ORDER BY contentsno DESC;
+
+SELECT * FROM contents;
+
+-- ?œ ?˜• 2 ì¹´í…Œê³ ë¦¬ë³? ëª©ë¡
 INSERT INTO contents(contentsno, memberno, cateno, title, content, recom, cnt, replycnt, passwd, 
                      word, rdate, file1, file1saved, thumb1, size1)
-VALUES(contents_seq.nextval, 1, 2, 'ëŒ€í–‰ì‚¬', 'í™ìˆ˜ì €ì™€ ê¸ˆìˆ˜ì €ì˜ ì„±ê³µ ìŠ¤í† ë¦¬', 0, 0, 0, '123',
-       'ë“œë¼ë§ˆ,Kë“œë¼ë§ˆ,ë„·í”Œë¦­ìŠ¤', sysdate, 'space.jpg', 'space_1.jpg', 'space_t.jpg', 1000);
+VALUES(contents_seq.nextval, 1, 2, '???–‰?‚¬', '?™?ˆ˜???? ê¸ˆìˆ˜???˜ ?„±ê³? ?Š¤?† ë¦?', 0, 0, 0, '123',
+       '?“œ?¼ë§?,K?“œ?¼ë§?,?„·?”Œë¦??Š¤', sysdate, 'space.jpg', 'space_1.jpg', 'space_t.jpg', 1000);
             
 INSERT INTO contents(contentsno, memberno, cateno, title, content, recom, cnt, replycnt, passwd, 
                      word, rdate, file1, file1saved, thumb1, size1)
-VALUES(contents_seq.nextval, 1, 2, 'ë”ê¸€ë¡œë¦¬', 'í•™í­ì˜ ê²°ë§', 0, 0, 0, '123',
-       'ë“œë¼ë§ˆ,Kë“œë¼ë§ˆ,ë„·í”Œë¦­ìŠ¤', sysdate, 'space.jpg', 'space_1.jpg', 'space_t.jpg', 1000);
+VALUES(contents_seq.nextval, 1, 2, '?”ê¸?ë¡œë¦¬', '?•™?­?˜ ê²°ë§', 0, 0, 0, '123',
+       '?“œ?¼ë§?,K?“œ?¼ë§?,?„·?”Œë¦??Š¤', sysdate, 'space.jpg', 'space_1.jpg', 'space_t.jpg', 1000);
 
 INSERT INTO contents(contentsno, memberno, cateno, title, content, recom, cnt, replycnt, passwd, 
                      word, rdate, file1, file1saved, thumb1, size1)
-VALUES(contents_seq.nextval, 1, 2, 'ë”ê¸€ë¡œë¦¬', 'í•™í­ì˜ ê²°ë§', 0, 0, 0, '123',
-       'ë“œë¼ë§ˆ,Kë“œë¼ë§ˆ,ë„·í”Œë¦­ìŠ¤', sysdate, 'space.jpg', 'space_1.jpg', 'space_t.jpg', 1000);
+VALUES(contents_seq.nextval, 1, 2, '?”ê¸?ë¡œë¦¬', '?•™?­?˜ ê²°ë§', 0, 0, 0, '123',
+       '?“œ?¼ë§?,K?“œ?¼ë§?,?„·?”Œë¦??Š¤', sysdate, 'space.jpg', 'space_1.jpg', 'space_t.jpg', 1000);
 
 COMMIT;
 
--- ì „ì²´ ëª©ë¡
+-- ? „ì²? ëª©ë¡
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, passwd, word, rdate,
            file1, file1saved, thumb1, size1, map, youtube mp4
 FROM contents
 ORDER BY contentsno DESC;
 
--- 1ë²ˆ cateno ë§Œ ì¶œë ¥
+-- 1ë²? cateno ë§? ì¶œë ¥
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, passwd, word, rdate,
         LOWER(file1) as file1, file1saved, thumb1, size1, map, youtube
 FROM contents
 WHERE cateno=1
 ORDER BY contentsno DESC;
 
--- 2ë²ˆ cateno ë§Œ ì¶œë ¥
+-- 2ë²? cateno ë§? ì¶œë ¥
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, passwd, word, rdate,
         LOWER(file1) as file1, file1saved, thumb1, size1, map, youtube
 FROM contents
 WHERE cateno=2
 ORDER BY contentsno ASC;
 
--- 3ë²ˆ cateno ë§Œ ì¶œë ¥
+-- 3ë²? cateno ë§? ì¶œë ¥
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, passwd, word, rdate,
         LOWER(file1) as file1, file1saved, thumb1, size1, map, youtube
 FROM contents
@@ -123,11 +129,11 @@ ORDER BY contentsno ASC;
 
 commit;
 
--- ëª¨ë“  ë ˆì½”ë“œ ì‚­ì œ
+-- ëª¨ë“  ? ˆì½”ë“œ ?‚­? œ
 DELETE FROM contents;
 commit;
 
--- ì‚­ì œ
+-- ?‚­? œ
 DELETE FROM contents
 WHERE contentsno = 25;
 commit;
@@ -139,72 +145,72 @@ commit;
 
 
 -- ----------------------------------------------------------------------------------------------------
--- ê²€ìƒ‰, catenoë³„ ê²€ìƒ‰ ëª©ë¡
+-- ê²??ƒ‰, catenoë³? ê²??ƒ‰ ëª©ë¡
 -- ----------------------------------------------------------------------------------------------------
--- ëª¨ë“ ê¸€
+-- ëª¨ë“ ê¸?
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, word, rdate,
        file1, file1saved, thumb1, size1, map, youtube
 FROM contents
 ORDER BY contentsno ASC;
 
--- ì¹´í…Œê³ ë¦¬ë³„ ëª©ë¡
+-- ì¹´í…Œê³ ë¦¬ë³? ëª©ë¡
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, word, rdate,
        file1, file1saved, thumb1, size1, map, youtube
 FROM contents
 WHERE cateno=2
 ORDER BY contentsno ASC;
 
--- 1) ê²€ìƒ‰
--- â‘  catenoë³„ ê²€ìƒ‰ ëª©ë¡
--- word ì»¬ëŸ¼ì˜ ì¡´ì¬ ì´ìœ : ê²€ìƒ‰ ì •í™•ë„ë¥¼ ë†’ì´ê¸° ìœ„í•˜ì—¬ ì¤‘ìš” ë‹¨ì–´ë¥¼ ëª…ì‹œ
--- ê¸€ì— 'swiss'ë¼ëŠ” ë‹¨ì–´ë§Œ ë“±ì¥í•˜ë©´ í•œê¸€ë¡œ 'ìŠ¤ìœ„ìŠ¤'ëŠ” ê²€ìƒ‰ ì•ˆë¨.
--- ì´ëŸ° ë¬¸ì œë¥¼ ë°©ì§€í•˜ê¸°ìœ„í•´ 'swiss,ìŠ¤ìœ„ìŠ¤,ìŠ¤ì˜ìŠ¤,ìˆ˜ì˜ìŠ¤,ìœ ëŸ½' ê²€ìƒ‰ì–´ê°€ ë“¤ì–´ê°„ word ì»¬ëŸ¼ì„ ì¶”ê°€í•¨.
+-- 1) ê²??ƒ‰
+-- ?‘  catenoë³? ê²??ƒ‰ ëª©ë¡
+-- word ì»¬ëŸ¼?˜ ì¡´ì¬ ?´?œ : ê²??ƒ‰ ? •?™•?„ë¥? ?†’?´ê¸? ?œ„?•˜?—¬ ì¤‘ìš” ?‹¨?–´ë¥? ëª…ì‹œ
+-- ê¸??— 'swiss'?¼?Š” ?‹¨?–´ë§? ?“±?¥?•˜ë©? ?•œê¸?ë¡? '?Š¤?œ„?Š¤'?Š” ê²??ƒ‰ ?•ˆ?¨.
+-- ?´?Ÿ° ë¬¸ì œë¥? ë°©ì??•˜ê¸°ìœ„?•´ 'swiss,?Š¤?œ„?Š¤,?Š¤?˜?Š¤,?ˆ˜?˜?Š¤,?œ ?Ÿ½' ê²??ƒ‰?–´ê°? ?“¤?–´ê°? word ì»¬ëŸ¼?„ ì¶”ê??•¨.
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, word, rdate,
            file1, file1saved, thumb1, size1, map, youtube
 FROM contents
-WHERE cateno=8 AND word LIKE '%ë¶€ëŒ€ì°Œê²Œ%'
+WHERE cateno=8 AND word LIKE '%ë¶???ì°Œê²Œ%'
 ORDER BY contentsno DESC;
 
 -- title, content, word column search
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, word, rdate,
            file1, file1saved, thumb1, size1, map, youtube
 FROM contents
-WHERE cateno=8 AND (title LIKE '%ë¶€ëŒ€ì°Œê²Œ%' OR content LIKE '%ë¶€ëŒ€ì°Œê²Œ%' OR word LIKE '%ë¶€ëŒ€ì°Œê²Œ%')
+WHERE cateno=8 AND (title LIKE '%ë¶???ì°Œê²Œ%' OR content LIKE '%ë¶???ì°Œê²Œ%' OR word LIKE '%ë¶???ì°Œê²Œ%')
 ORDER BY contentsno DESC;
 
--- â‘¡ ê²€ìƒ‰ ë ˆì½”ë“œ ê°¯ìˆ˜
--- ì „ì²´ ë ˆì½”ë“œ ê°¯ìˆ˜, ì§‘ê³„ í•¨ìˆ˜
+-- ?‘¡ ê²??ƒ‰ ? ˆì½”ë“œ ê°??ˆ˜
+-- ? „ì²? ? ˆì½”ë“œ ê°??ˆ˜, ì§‘ê³„ ?•¨?ˆ˜
 SELECT COUNT(*)
 FROM contents
 WHERE cateno=8;
 
-  COUNT(*)  <- ì»¬ëŸ¼ëª…
+  COUNT(*)  <- ì»¬ëŸ¼ëª?
 ----------
          5
          
-SELECT COUNT(*) as cnt -- í•¨ìˆ˜ ì‚¬ìš©ì‹œëŠ” ì»¬ëŸ¼ ë³„ëª…ì„ ì„ ì–¸í•˜ëŠ” ê²ƒì„ ê¶Œì¥
+SELECT COUNT(*) as cnt -- ?•¨?ˆ˜ ?‚¬?š©?‹œ?Š” ì»¬ëŸ¼ ë³„ëª…?„ ?„ ?–¸?•˜?Š” ê²ƒì„ ê¶Œì¥
 FROM contents
 WHERE cateno=8;
 
-       CNT <- ì»¬ëŸ¼ëª…
+       CNT <- ì»¬ëŸ¼ëª?
 ----------
          5
 
--- cateno ë³„ ê²€ìƒ‰ëœ ë ˆì½”ë“œ ê°¯ìˆ˜
+-- cateno ë³? ê²??ƒ‰?œ ? ˆì½”ë“œ ê°??ˆ˜
 SELECT COUNT(*) as cnt
 FROM contents
-WHERE cateno=8 AND word LIKE '%ë¶€ëŒ€ì°Œê²Œ%';
+WHERE cateno=8 AND word LIKE '%ë¶???ì°Œê²Œ%';
 
 SELECT COUNT(*) as cnt
 FROM contents
-WHERE cateno=8 AND (title LIKE '%ë¶€ëŒ€ì°Œê²Œ%' OR content LIKE '%ë¶€ëŒ€ì°Œê²Œ%' OR word LIKE '%ë¶€ëŒ€ì°Œê²Œ%');
+WHERE cateno=8 AND (title LIKE '%ë¶???ì°Œê²Œ%' OR content LIKE '%ë¶???ì°Œê²Œ%' OR word LIKE '%ë¶???ì°Œê²Œ%');
 
--- SUBSTR(ì»¬ëŸ¼ëª…, ì‹œì‘ index(1ë¶€í„° ì‹œì‘), ê¸¸ì´), ë¶€ë¶„ ë¬¸ìì—´ ì¶”ì¶œ
+-- SUBSTR(ì»¬ëŸ¼ëª?, ?‹œ?‘ index(1ë¶??„° ?‹œ?‘), ê¸¸ì´), ë¶?ë¶? ë¬¸ì?—´ ì¶”ì¶œ
 SELECT contentsno, SUBSTR(title, 1, 4) as title
 FROM contents
-WHERE cateno=8 AND (content LIKE '%ë¶€ëŒ€%');
+WHERE cateno=8 AND (content LIKE '%ë¶???%');
 
--- SQLì€ ëŒ€ì†Œë¬¸ìë¥¼ êµ¬ë¶„í•˜ì§€ ì•Šìœ¼ë‚˜ WHEREë¬¸ì— ëª…ì‹œí•˜ëŠ” ê°’ì€ ëŒ€ì†Œë¬¸ìë¥¼ êµ¬ë¶„í•˜ì—¬ ê²€ìƒ‰
+-- SQL?? ???†Œë¬¸ìë¥? êµ¬ë¶„?•˜ì§? ?•Š?œ¼?‚˜ WHEREë¬¸ì— ëª…ì‹œ?•˜?Š” ê°’ì? ???†Œë¬¸ìë¥? êµ¬ë¶„?•˜?—¬ ê²??ƒ‰
 SELECT contentsno, title, word
 FROM contents
 WHERE cateno=8 AND (word LIKE '%FOOD%');
@@ -215,31 +221,31 @@ WHERE cateno=8 AND (word LIKE '%food%');
 
 SELECT contentsno, title, word
 FROM contents
-WHERE cateno=8 AND (LOWER(word) LIKE '%food%'); -- ëŒ€ì†Œë¬¸ìë¥¼ ì¼ì¹˜ ì‹œì¼œì„œ ê²€ìƒ‰
+WHERE cateno=8 AND (LOWER(word) LIKE '%food%'); -- ???†Œë¬¸ìë¥? ?¼ì¹? ?‹œì¼œì„œ ê²??ƒ‰
 
 SELECT contentsno, title, word
 FROM contents
-WHERE cateno=8 AND (UPPER(word) LIKE '%' || UPPER('FOOD') || '%'); -- ëŒ€ì†Œë¬¸ìë¥¼ ì¼ì¹˜ ì‹œì¼œì„œ ê²€ìƒ‰ â˜…
+WHERE cateno=8 AND (UPPER(word) LIKE '%' || UPPER('FOOD') || '%'); -- ???†Œë¬¸ìë¥? ?¼ì¹? ?‹œì¼œì„œ ê²??ƒ‰ ?˜…
 
 SELECT contentsno, title, word
 FROM contents
-WHERE cateno=8 AND (LOWER(word) LIKE '%' || LOWER('Food') || '%'); -- ëŒ€ì†Œë¬¸ìë¥¼ ì¼ì¹˜ ì‹œì¼œì„œ ê²€ìƒ‰
+WHERE cateno=8 AND (LOWER(word) LIKE '%' || LOWER('Food') || '%'); -- ???†Œë¬¸ìë¥? ?¼ì¹? ?‹œì¼œì„œ ê²??ƒ‰
 
-SELECT contentsno || '. ' || title || ' íƒœê·¸: ' || word as title -- ì»¬ëŸ¼ì˜ ê²°í•©, ||
+SELECT contentsno || '. ' || title || ' ?ƒœê·?: ' || word as title -- ì»¬ëŸ¼?˜ ê²°í•©, ||
 FROM contents
-WHERE cateno=8 AND (LOWER(word) LIKE '%' || LOWER('Food') || '%'); -- ëŒ€ì†Œë¬¸ìë¥¼ ì¼ì¹˜ ì‹œì¼œì„œ ê²€ìƒ‰
+WHERE cateno=8 AND (LOWER(word) LIKE '%' || LOWER('Food') || '%'); -- ???†Œë¬¸ìë¥? ?¼ì¹? ?‹œì¼œì„œ ê²??ƒ‰
 
 
-SELECT UPPER('í•œê¸€') FROM dual; -- dual: ì˜¤ë¼í´ì—ì„œ SQL í˜•ì‹ì„ ë§ì¶”ê¸°ìœ„í•œ ì‹œìŠ¤í…œ í…Œì´ë¸”
+SELECT UPPER('?•œê¸?') FROM dual; -- dual: ?˜¤?¼?´?—?„œ SQL ?˜•?‹?„ ë§ì¶”ê¸°ìœ„?•œ ?‹œ?Š¤?…œ ?…Œ?´ë¸?
 
 -- ----------------------------------------------------------------------------------------------------
--- ê²€ìƒ‰ + í˜ì´ì§• + ë©”ì¸ ì´ë¯¸ì§€
+-- ê²??ƒ‰ + ?˜?´ì§? + ë©”ì¸ ?´ë¯¸ì?
 -- ----------------------------------------------------------------------------------------------------
 -- step 1
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, rdate,
            file1, file1saved, thumb1, size1, map, youtube
 FROM contents
-WHERE cateno=1 AND (title LIKE '%ë‹¨í’%' OR content LIKE '%ë‹¨í’%' OR word LIKE '%ë‹¨í’%')
+WHERE cateno=1 AND (title LIKE '%?‹¨?’%' OR content LIKE '%?‹¨?’%' OR word LIKE '%?‹¨?’%')
 ORDER BY contentsno DESC;
 
 -- step 2
@@ -249,7 +255,7 @@ FROM (
           SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, rdate,
                      file1, file1saved, thumb1, size1, map, youtube
           FROM contents
-          WHERE cateno=1 AND (title LIKE '%ë‹¨í’%' OR content LIKE '%ë‹¨í’%' OR word LIKE '%ë‹¨í’%')
+          WHERE cateno=1 AND (title LIKE '%?‹¨?’%' OR content LIKE '%?‹¨?’%' OR word LIKE '%?‹¨?’%')
           ORDER BY contentsno DESC
 );
 
@@ -263,7 +269,7 @@ FROM (
                      SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, rdate,
                                 file1, file1saved, thumb1, size1, map, youtube
                      FROM contents
-                     WHERE cateno=1 AND (title LIKE '%ë‹¨í’%' OR content LIKE '%ë‹¨í’%' OR word LIKE '%ë‹¨í’%')
+                     WHERE cateno=1 AND (title LIKE '%?‹¨?’%' OR content LIKE '%?‹¨?’%' OR word LIKE '%?‹¨?’%')
                      ORDER BY contentsno DESC
            )          
 )
@@ -279,13 +285,13 @@ FROM (
                      SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, rdate,
                                 file1, file1saved, thumb1, size1, map, youtube
                      FROM contents
-                     WHERE cateno=1 AND (title LIKE '%ë‹¨í’%' OR content LIKE '%ë‹¨í’%' OR word LIKE '%ë‹¨í’%')
+                     WHERE cateno=1 AND (title LIKE '%?‹¨?’%' OR content LIKE '%?‹¨?’%' OR word LIKE '%?‹¨?’%')
                      ORDER BY contentsno DESC
            )          
 )
 WHERE r >= 4 AND r <= 6;
 
--- ëŒ€ì†Œë¬¸ìë¥¼ ì²˜ë¦¬í•˜ëŠ” í˜ì´ì§• ì¿¼ë¦¬
+-- ???†Œë¬¸ìë¥? ì²˜ë¦¬?•˜?Š” ?˜?´ì§? ì¿¼ë¦¬
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, rdate,
            file1, file1saved, thumb1, size1, map, youtube, r
 FROM (
@@ -295,9 +301,9 @@ FROM (
                      SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, rdate,
                                 file1, file1saved, thumb1, size1, map, youtube
                      FROM contents
-                     WHERE cateno=1 AND (UPPER(title) LIKE '%' || UPPER('ë‹¨í’') || '%' 
-                                         OR UPPER(content) LIKE '%' || UPPER('ë‹¨í’') || '%' 
-                                         OR UPPER(word) LIKE '%' || UPPER('ë‹¨í’') || '%')
+                     WHERE cateno=1 AND (UPPER(title) LIKE '%' || UPPER('?‹¨?’') || '%' 
+                                         OR UPPER(content) LIKE '%' || UPPER('?‹¨?’') || '%' 
+                                         OR UPPER(word) LIKE '%' || UPPER('?‹¨?’') || '%')
                      ORDER BY contentsno DESC
            )          
 )
@@ -312,67 +318,67 @@ FROM contents
 WHERE contentsno = 1;
 
 -- ----------------------------------------------------------------------------
--- ë‹¤ìŒ ì§€ë„, MAP, ë¨¼ì € ë ˆì½”ë“œê°€ ë“±ë¡ë˜ì–´ ìˆì–´ì•¼í•¨.
+-- ?‹¤?Œ ì§??„, MAP, ë¨¼ì? ? ˆì½”ë“œê°? ?“±ë¡ë˜?–´ ?ˆ?–´?•¼?•¨.
 -- map                                   VARCHAR2(1000)         NULL ,
 -- ----------------------------------------------------------------------------
--- MAP ë“±ë¡/ìˆ˜ì •
-UPDATE contents SET map='ì¹´í˜ì‚° ì§€ë„ ìŠ¤í¬ë¦½íŠ¸' WHERE contentsno=1;
+-- MAP ?“±ë¡?/?ˆ˜? •
+UPDATE contents SET map='ì¹´í˜?‚° ì§??„ ?Š¤?¬ë¦½íŠ¸' WHERE contentsno=1;
 
--- MAP ì‚­ì œ
+-- MAP ?‚­? œ
 UPDATE contents SET map='' WHERE contentsno=1;
 
 commit;
 
 -- ----------------------------------------------------------------------------
--- Youtube, ë¨¼ì € ë ˆì½”ë“œê°€ ë“±ë¡ë˜ì–´ ìˆì–´ì•¼í•¨.
+-- Youtube, ë¨¼ì? ? ˆì½”ë“œê°? ?“±ë¡ë˜?–´ ?ˆ?–´?•¼?•¨.
 -- youtube                                   VARCHAR2(1000)         NULL ,
 -- ----------------------------------------------------------------------------
--- youtube ë“±ë¡/ìˆ˜ì •
-UPDATE contents SET youtube='Youtube ìŠ¤í¬ë¦½íŠ¸' WHERE contentsno=1;
+-- youtube ?“±ë¡?/?ˆ˜? •
+UPDATE contents SET youtube='Youtube ?Š¤?¬ë¦½íŠ¸' WHERE contentsno=1;
 
--- youtube ì‚­ì œ
+-- youtube ?‚­? œ
 UPDATE contents SET youtube='' WHERE contentsno=1;
 
 commit;
 
--- íŒ¨ìŠ¤ì›Œë“œ ê²€ì‚¬, id="password_check"
+-- ?Œ¨?Š¤?›Œ?“œ ê²??‚¬, id="password_check"
 SELECT COUNT(*) as cnt 
 FROM contents
 WHERE contentsno=1 AND passwd='123';
 
--- í…ìŠ¤íŠ¸ ìˆ˜ì •: ì˜ˆì™¸ ì»¬ëŸ¼: ì¶”ì²œìˆ˜, ì¡°íšŒìˆ˜, ëŒ“ê¸€ ìˆ˜
+-- ?…?Š¤?Š¸ ?ˆ˜? •: ?˜ˆ?™¸ ì»¬ëŸ¼: ì¶”ì²œ?ˆ˜, ì¡°íšŒ?ˆ˜, ?Œ“ê¸? ?ˆ˜
 UPDATE contents
-SET title='ê¸°ì°¨ë¥¼ íƒ€ê³ ', content='ê³„íšì—†ì´ ì—¬í–‰ ì¶œë°œ',  word='ë‚˜,ê¸°ì°¨,ìƒê°' 
+SET title='ê¸°ì°¨ë¥? ??ê³?', content='ê³„íš?—†?´ ?—¬?–‰ ì¶œë°œ',  word='?‚˜,ê¸°ì°¨,?ƒê°?' 
 WHERE contentsno = 2;
 
--- ERROR, " ì‚¬ìš© ì—ëŸ¬
+-- ERROR, " ?‚¬?š© ?—?Ÿ¬
 UPDATE contents
-SET title='ê¸°ì°¨ë¥¼ íƒ€ê³ ', content="ê³„íšì—†ì´ 'ì—¬í–‰' ì¶œë°œ",  word='ë‚˜,ê¸°ì°¨,ìƒê°'
+SET title='ê¸°ì°¨ë¥? ??ê³?', content="ê³„íš?—†?´ '?—¬?–‰' ì¶œë°œ",  word='?‚˜,ê¸°ì°¨,?ƒê°?'
 WHERE contentsno = 1;
 
--- ERROR, \' ì—ëŸ¬
+-- ERROR, \' ?—?Ÿ¬
 UPDATE contents
-SET title='ê¸°ì°¨ë¥¼ íƒ€ê³ ', content='ê³„íšì—†ì´ \'ì—¬í–‰\' ì¶œë°œ',  word='ë‚˜,ê¸°ì°¨,ìƒê°'
+SET title='ê¸°ì°¨ë¥? ??ê³?', content='ê³„íš?—†?´ \'?—¬?–‰\' ì¶œë°œ',  word='?‚˜,ê¸°ì°¨,?ƒê°?'
 WHERE contentsno = 1;
 
--- SUCCESS, '' í•œë²ˆ ' ì¶œë ¥ë¨.
+-- SUCCESS, '' ?•œë²? ' ì¶œë ¥?¨.
 UPDATE contents
-SET title='ê¸°ì°¨ë¥¼ íƒ€ê³ ', content='ê³„íšì—†ì´ ''ì—¬í–‰'' ì¶œë°œ',  word='ë‚˜,ê¸°ì°¨,ìƒê°'
+SET title='ê¸°ì°¨ë¥? ??ê³?', content='ê³„íš?—†?´ ''?—¬?–‰'' ì¶œë°œ',  word='?‚˜,ê¸°ì°¨,?ƒê°?'
 WHERE contentsno = 1;
 
 -- SUCCESS
 UPDATE contents
-SET title='ê¸°ì°¨ë¥¼ íƒ€ê³ ', content='ê³„íšì—†ì´ "ì—¬í–‰" ì¶œë°œ',  word='ë‚˜,ê¸°ì°¨,ìƒê°'
+SET title='ê¸°ì°¨ë¥? ??ê³?', content='ê³„íš?—†?´ "?—¬?–‰" ì¶œë°œ',  word='?‚˜,ê¸°ì°¨,?ƒê°?'
 WHERE contentsno = 1;
 
 commit;
 
--- íŒŒì¼ ìˆ˜ì •
+-- ?ŒŒ?¼ ?ˆ˜? •
 UPDATE contents
 SET file1='train.jpg', file1saved='train.jpg', thumb1='train_t.jpg', size1=5000
 WHERE contentsno = 1;
 
--- ì‚­ì œ
+-- ?‚­? œ
 DELETE FROM contents
 WHERE contentsno = 42;
 
@@ -388,41 +394,41 @@ UPDATE contents
 SET recom = recom + 1
 WHERE contentsno = 1;
 
--- cateno FK íŠ¹ì • ê·¸ë£¹ì— ì†í•œ ë ˆì½”ë“œ ê°¯ìˆ˜ ì‚°ì¶œ
+-- cateno FK ?Š¹? • ê·¸ë£¹?— ?†?•œ ? ˆì½”ë“œ ê°??ˆ˜ ?‚°ì¶?
 SELECT COUNT(*) as cnt 
 FROM contents 
 WHERE cateno=1;
 
--- memberno FK íŠ¹ì • ê´€ë¦¬ìì— ì†í•œ ë ˆì½”ë“œ ê°¯ìˆ˜ ì‚°ì¶œ
+-- memberno FK ?Š¹? • ê´?ë¦¬ì?— ?†?•œ ? ˆì½”ë“œ ê°??ˆ˜ ?‚°ì¶?
 SELECT COUNT(*) as cnt 
 FROM contents 
 WHERE memberno=1;
 
--- cateno FK íŠ¹ì • ê·¸ë£¹ì— ì†í•œ ë ˆì½”ë“œ ëª¨ë‘ ì‚­ì œ
+-- cateno FK ?Š¹? • ê·¸ë£¹?— ?†?•œ ? ˆì½”ë“œ ëª¨ë‘ ?‚­? œ
 DELETE FROM contents
 WHERE cateno=1;
 
--- memberno FK íŠ¹ì • ê´€ë¦¬ìì— ì†í•œ ë ˆì½”ë“œ ëª¨ë‘ ì‚­ì œ
+-- memberno FK ?Š¹? • ê´?ë¦¬ì?— ?†?•œ ? ˆì½”ë“œ ëª¨ë‘ ?‚­? œ
 DELETE FROM contents
 WHERE memberno=1;
 
 commit;
 
--- ë‹¤ìˆ˜ì˜ ì¹´í…Œê³ ë¦¬ì— ì†í•œ ë ˆì½”ë“œ ê°¯ìˆ˜ ì‚°ì¶œ: IN
+-- ?‹¤?ˆ˜?˜ ì¹´í…Œê³ ë¦¬?— ?†?•œ ? ˆì½”ë“œ ê°??ˆ˜ ?‚°ì¶?: IN
 SELECT COUNT(*) as cnt
 FROM contents
 WHERE cateno IN(1,2,3);
 
--- ë‹¤ìˆ˜ì˜ ì¹´í…Œê³ ë¦¬ì— ì†í•œ ë ˆì½”ë“œ ëª¨ë‘ ì‚­ì œ: IN
+-- ?‹¤?ˆ˜?˜ ì¹´í…Œê³ ë¦¬?— ?†?•œ ? ˆì½”ë“œ ëª¨ë‘ ?‚­? œ: IN
 SELECT contentsno, memberno, cateno, title
 FROM contents
 WHERE cateno IN(1,2,3);
 
 CONTENTSNO    ADMINNO     CATENO TITLE                                                                                                                                                                                                                                                                                                       
 ---------- ---------- ---------- ------------------------
-         3             1                   1           ì¸í„°ìŠ¤í…”ë¼                                                                                                                                                                                                                                                                                                  
-         4             1                   2           ë“œë¼ë§ˆ                                                                                                                                                                                                                                                                                                      
-         5             1                   3           ì»¨ì €ë§                                                                                                                                                                                                                                                                                                      
+         3             1                   1           ?¸?„°?Š¤?…”?¼                                                                                                                                                                                                                                                                                                  
+         4             1                   2           ?“œ?¼ë§?                                                                                                                                                                                                                                                                                                      
+         5             1                   3           ì»¨ì?ë§?                                                                                                                                                                                                                                                                                                      
          6             1                   1           ë§ˆì…˜       
          
 SELECT contentsno, memberno, cateno, title
@@ -431,15 +437,15 @@ WHERE cateno IN('1','2','3');
 
 CONTENTSNO    ADMINNO     CATENO TITLE                                                                                                                                                                                                                                                                                                       
 ---------- ---------- ---------- ------------------------
-         3             1                   1           ì¸í„°ìŠ¤í…”ë¼                                                                                                                                                                                                                                                                                                  
-         4             1                   2           ë“œë¼ë§ˆ                                                                                                                                                                                                                                                                                                      
-         5             1                   3           ì»¨ì €ë§                                                                                                                                                                                                                                                                                                      
+         3             1                   1           ?¸?„°?Š¤?…”?¼                                                                                                                                                                                                                                                                                                  
+         4             1                   2           ?“œ?¼ë§?                                                                                                                                                                                                                                                                                                      
+         5             1                   3           ì»¨ì?ë§?                                                                                                                                                                                                                                                                                                      
          6             1                   1           ë§ˆì…˜       
 
 -- ----------------------------------------------------------------------------------------------------
 -- cate + contents INNER JOIN
 -- ----------------------------------------------------------------------------------------------------
--- ëª¨ë“ ê¸€
+-- ëª¨ë“ ê¸?
 SELECT c.name,
        t.contentsno, t.memberno, t.cateno, t.title, t.content, t.recom, t.cnt, t.replycnt, t.word, t.rdate,
        t.file1, t.file1saved, t.thumb1, t.size1, t.map, t.youtube
@@ -478,7 +484,7 @@ FROM (
      SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, rdate,
             file1, file1saved, thumb1, size1, map, youtube, rownum as r
      FROM vcontents -- View
-     WHERE cateno=14 AND (title LIKE '%ì•¼ê²½%' OR content LIKE '%ì•¼ê²½%' OR word LIKE '%ì•¼ê²½%')
+     WHERE cateno=14 AND (title LIKE '%?•¼ê²?%' OR content LIKE '%?•¼ê²?%' OR word LIKE '%?•¼ê²?%')
 )
 WHERE r >= 1 AND r <= 3;
 
@@ -489,13 +495,13 @@ FROM (
      SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, rdate,
             file1, file1saved, thumb1, size1, map, youtube, rownum as r
      FROM vcontents -- View
-     WHERE cateno=14 AND (title LIKE '%ì•¼ê²½%' OR content LIKE '%ì•¼ê²½%' OR word LIKE '%ì•¼ê²½%')
+     WHERE cateno=14 AND (title LIKE '%?•¼ê²?%' OR content LIKE '%?•¼ê²?%' OR word LIKE '%?•¼ê²?%')
 )
 WHERE r >= 4 AND r <= 6;
 
 
 -- ----------------------------------------------------------------------------------------------------
--- ê´€ì‹¬ ì¹´í…Œê³ ë¦¬ì˜ ì¢‹ì•„ìš”(recom) ê¸°ì¤€, 1ë²ˆ íšŒì›ì´ 1ë²ˆ ì¹´í…Œê³ ë¦¬ë¥¼ ì¶”ì²œ ë°›ëŠ” ê²½ìš°, ì¶”ì²œ ìƒí’ˆì´ 7ê±´ì¼ ê²½ìš°
+-- ê´??‹¬ ì¹´í…Œê³ ë¦¬?˜ ì¢‹ì•„?š”(recom) ê¸°ì?, 1ë²? ?šŒ?›?´ 1ë²? ì¹´í…Œê³ ë¦¬ë¥? ì¶”ì²œ ë°›ëŠ” ê²½ìš°, ì¶”ì²œ ?ƒ?’ˆ?´ 7ê±´ì¼ ê²½ìš°
 -- ----------------------------------------------------------------------------------------------------
 SELECT contentsno, memberno, cateno, title, thumb1, r
 FROM (
@@ -510,7 +516,7 @@ FROM (
 WHERE r >= 1 AND r <= 7;
 
 -- ----------------------------------------------------------------------------------------------------
--- ê´€ì‹¬ ì¹´í…Œê³ ë¦¬ì˜ í‰ì (score) ê¸°ì¤€, 1ë²ˆ íšŒì›ì´ 1ë²ˆ ì¹´í…Œê³ ë¦¬ë¥¼ ì¶”ì²œ ë°›ëŠ” ê²½ìš°, ì¶”ì²œ ìƒí’ˆì´ 7ê±´ì¼ ê²½ìš°
+-- ê´??‹¬ ì¹´í…Œê³ ë¦¬?˜ ?‰? (score) ê¸°ì?, 1ë²? ?šŒ?›?´ 1ë²? ì¹´í…Œê³ ë¦¬ë¥? ì¶”ì²œ ë°›ëŠ” ê²½ìš°, ì¶”ì²œ ?ƒ?’ˆ?´ 7ê±´ì¼ ê²½ìš°
 -- ----------------------------------------------------------------------------------------------------
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, rdate,
            file1, file1saved, thumb1, size1, map, youtube, r
@@ -528,7 +534,7 @@ FROM (
 WHERE r >= 1 AND r <= 7;
 
 -- ----------------------------------------------------------------------------------------------------
--- ê´€ì‹¬ ì¹´í…Œê³ ë¦¬ì˜ ìµœì‹  ìƒí’ˆ ê¸°ì¤€, 1ë²ˆ íšŒì›ì´ 1ë²ˆ ì¹´í…Œê³ ë¦¬ë¥¼ ì¶”ì²œ ë°›ëŠ” ê²½ìš°, ì¶”ì²œ ìƒí’ˆì´ 7ê±´ì¼ ê²½ìš°
+-- ê´??‹¬ ì¹´í…Œê³ ë¦¬?˜ ìµœì‹  ?ƒ?’ˆ ê¸°ì?, 1ë²? ?šŒ?›?´ 1ë²? ì¹´í…Œê³ ë¦¬ë¥? ì¶”ì²œ ë°›ëŠ” ê²½ìš°, ì¶”ì²œ ?ƒ?’ˆ?´ 7ê±´ì¼ ê²½ìš°
 -- ----------------------------------------------------------------------------------------------------
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, rdate,
            file1, file1saved, thumb1, size1, map, youtube, r
@@ -546,7 +552,7 @@ FROM (
 WHERE r >= 1 AND r <= 7;
 
 -- ----------------------------------------------------------------------------------------------------
--- ê´€ì‹¬ ì¹´í…Œê³ ë¦¬ì˜ ì¡°íšŒìˆ˜ ë†’ì€ ìƒí’ˆê¸°ì¤€, 1ë²ˆ íšŒì›ì´ 1ë²ˆ ì¹´í…Œê³ ë¦¬ë¥¼ ì¶”ì²œ ë°›ëŠ” ê²½ìš°, ì¶”ì²œ ìƒí’ˆì´ 7ê±´ì¼ ê²½ìš°
+-- ê´??‹¬ ì¹´í…Œê³ ë¦¬?˜ ì¡°íšŒ?ˆ˜ ?†’?? ?ƒ?’ˆê¸°ì?, 1ë²? ?šŒ?›?´ 1ë²? ì¹´í…Œê³ ë¦¬ë¥? ì¶”ì²œ ë°›ëŠ” ê²½ìš°, ì¶”ì²œ ?ƒ?’ˆ?´ 7ê±´ì¼ ê²½ìš°
 -- ----------------------------------------------------------------------------------------------------
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, rdate,
            file1, file1saved, thumb1, size1, map, youtube, r
@@ -564,7 +570,7 @@ FROM (
 WHERE r >= 1 AND r <= 7;
 
 -- ----------------------------------------------------------------------------------------------------
--- ê´€ì‹¬ ì¹´í…Œê³ ë¦¬ì˜ ë‚®ì€ ê°€ê²© ìƒí’ˆ ì¶”ì²œ, 1ë²ˆ íšŒì›ì´ 1ë²ˆ ì¹´í…Œê³ ë¦¬ë¥¼ ì¶”ì²œ ë°›ëŠ” ê²½ìš°, ì¶”ì²œ ìƒí’ˆì´ 7ê±´ì¼ ê²½ìš°
+-- ê´??‹¬ ì¹´í…Œê³ ë¦¬?˜ ?‚®?? ê°?ê²? ?ƒ?’ˆ ì¶”ì²œ, 1ë²? ?šŒ?›?´ 1ë²? ì¹´í…Œê³ ë¦¬ë¥? ì¶”ì²œ ë°›ëŠ” ê²½ìš°, ì¶”ì²œ ?ƒ?’ˆ?´ 7ê±´ì¼ ê²½ìš°
 -- ----------------------------------------------------------------------------------------------------
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, rdate,
            file1, file1saved, thumb1, size1, map, youtube, r
@@ -582,7 +588,7 @@ FROM (
 WHERE r >= 1 AND r <= 7;
 
 -- ----------------------------------------------------------------------------------------------------
--- ê´€ì‹¬ ì¹´í…Œê³ ë¦¬ì˜ ë†’ì€ ê°€ê²© ìƒí’ˆ ì¶”ì²œ, 1ë²ˆ íšŒì›ì´ 1ë²ˆ ì¹´í…Œê³ ë¦¬ë¥¼ ì¶”ì²œ ë°›ëŠ” ê²½ìš°, ì¶”ì²œ ìƒí’ˆì´ 7ê±´ì¼ ê²½ìš°
+-- ê´??‹¬ ì¹´í…Œê³ ë¦¬?˜ ?†’?? ê°?ê²? ?ƒ?’ˆ ì¶”ì²œ, 1ë²? ?šŒ?›?´ 1ë²? ì¹´í…Œê³ ë¦¬ë¥? ì¶”ì²œ ë°›ëŠ” ê²½ìš°, ì¶”ì²œ ?ƒ?’ˆ?´ 7ê±´ì¼ ê²½ìš°
 -- ----------------------------------------------------------------------------------------------------
 SELECT contentsno, memberno, cateno, title, content, recom, cnt, replycnt, rdate,
            file1, file1saved, thumb1, size1, map, youtube, r
@@ -600,25 +606,25 @@ FROM (
 WHERE r >= 1 AND r <= 7;
 
 -----------------------------------------------------------
--- FK cateno ì»¬ëŸ¼ì— ëŒ€ì‘í•˜ëŠ” í•„ìˆ˜ SQL
+-- FK cateno ì»¬ëŸ¼?— ???‘?•˜?Š” ?•„?ˆ˜ SQL
 -----------------------------------------------------------
--- íŠ¹ì • ì¹´í…Œê³ ë¦¬ì— ì†í•œ ë ˆì½”ë“œ ê°¯ìˆ˜ë¥¼ ë¦¬í„´
+-- ?Š¹? • ì¹´í…Œê³ ë¦¬?— ?†?•œ ? ˆì½”ë“œ ê°??ˆ˜ë¥? ë¦¬í„´
 SELECT COUNT(*) as cnt 
 FROM contents 
 WHERE cateno=1;
   
--- íŠ¹ì • ì¹´í…Œê³ ë¦¬ì— ì†í•œ ëª¨ë“  ë ˆì½”ë“œ ì‚­ì œ
+-- ?Š¹? • ì¹´í…Œê³ ë¦¬?— ?†?•œ ëª¨ë“  ? ˆì½”ë“œ ?‚­? œ
 DELETE FROM contents
 WHERE cateno=1;
 
 -----------------------------------------------------------
--- FK memberno ì»¬ëŸ¼ì— ëŒ€ì‘í•˜ëŠ” í•„ìˆ˜ SQL
+-- FK memberno ì»¬ëŸ¼?— ???‘?•˜?Š” ?•„?ˆ˜ SQL
 -----------------------------------------------------------
--- íŠ¹ì • íšŒì›ì— ì†í•œ ë ˆì½”ë“œ ê°¯ìˆ˜ë¥¼ ë¦¬í„´
+-- ?Š¹? • ?šŒ?›?— ?†?•œ ? ˆì½”ë“œ ê°??ˆ˜ë¥? ë¦¬í„´
 SELECT COUNT(*) as cnt 
 FROM contents 
 WHERE memberno=1;
   
--- íŠ¹ì • íšŒì›ì— ì†í•œ ëª¨ë“  ë ˆì½”ë“œ ì‚­ì œ
+-- ?Š¹? • ?šŒ?›?— ?†?•œ ëª¨ë“  ? ˆì½”ë“œ ?‚­? œ
 DELETE FROM contents
 WHERE memberno=1;

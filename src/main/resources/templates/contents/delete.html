@@ -43,8 +43,8 @@
           <span style='font-size: 1.5em;' th:text="${contentsVO.title}"></span>
           <br>
           <form name='frm' method='POST' action='./delete'>
-            <input type="hidden" name="categoryno" th:value="${categoryVO.categoryno}">
             <input type="hidden" name="contentsno" th:value="${contentsVO.contentsno}">
+            <input type="hidden" name="categoryno" th:value="${categoryVO.categoryno}">
             <input type="hidden" name="now_page" th:value="${now_page}">
             <input type="hidden" name="search_word" th:value="${word}">
             
