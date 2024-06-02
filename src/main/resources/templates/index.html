@@ -1,81 +1,101 @@
 <!DOCTYPE html>
 <html layout:decorate="~{layout}">
-    <!-- layout.html 상속 -->
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
+  <!-- layout.html 상속 -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
-        <script>
-            $(document).ready(function () {
-                $('.slider').bxSlider();
-            });
-        </script>
-    </head>
+    <script>
+      $(document).ready(function () {
+        $(".slider").bxSlider();
+      });
+    </script>
+  </head>
 
-    <body>
-        <div layout:fragment="content" style="width: 40%; margin: 50px auto; text-align: center">
-            <a class="nav-link" href="/contents/list_by_categoryno?categoryno=3"
-                ><p style="font-size: 27px; font-weight: bold">"영등포" 유명 장소 보러가기</p></a
-            >
+  <body>
+    <div
+      layout:fragment="content"
+      style="width: 40%; margin: 50px auto; text-align: center"
+    >
+      <a class="nav-link" href="/contents/list_by_categoryno?categoryno=3"
+        ><p style="font-size: 27px; font-weight: bold">
+          "영등포" 유명 장소 보러가기
+        </p></a
+      >
 
-            <div class="slider">
-                <div class="slide_img_1"></div>
-                <div class="slide_img_2"></div>
+      <div class="slider">
+        <div class="slide_img_1">타임스퀘어</div>
+        <div class="slide_img_2">여의도공원</div>
 
-                <!-- <div th:each="contentsVO, status:${list}">
+        <!-- <div th:each="contentsVO, status:${list}">
                 <div
                     th:if="${contentsVO.file1.endsWith('jpg') or contentsVO.file1.endsWith('png')  or contentsVO.file1.endsWith('gif')}"
                 >
                     <img th:src="@{|/contents/storage/${contentsVO.thumb1}|}" style="width: 120px; height: 90px" />
                 </div>
             </div> -->
-            </div>
+      </div>
 
-            <div class="wrap-flex flex-middle mt-80p font-32p pb-1rem border-bottom-1 mobile-title-box">
-                <div class="mr-20p"></div>
-                <span class="offmobile">우정과 환대의 이웃, 다채로운 </span><span class="ml-10p">문화생산도시</span>
-                <span class="font-weight-800 ml-10p"> 영등포</span><br /><br />
-            </div>
+      <div
+        class="wrap-flex flex-middle mt-80p font-32p pb-1rem border-bottom-1 mobile-title-box"
+      >
+        <div class="mr-20p"></div>
+        <span class="offmobile">우정과 환대의 이웃, 다채로운 </span
+        ><span class="ml-10p">문화생산도시</span>
+        <span class="font-weight-800 ml-10p"> 영등포</span><br /><br />
+      </div>
 
-            <div class="text-center mobile-left">
-                <div class="line-txt mt-44p nanum-barun">영등포의 다채로운 도시자원과 문화의 경계를 연결합니다.</div>
-                <div class="line-txt mt-5p nanum-barun">
-                    이주와 이동의 도시를 넘어 우정과 환대의 도시가 될 수 있도록 40만 이웃의 삶의 이야기를 경청합니다.
-                </div>
-                <div class="line-txt mt-5p nanum-barun">
-                    행동하는 창조적 공유지를 위한 문화도시를 시민과 함께 만들어 갑니다.<br /><br />
-                </div>
-            </div>
-
-            <div class="culture-btn-wrap mt-50p">
-                <a href="https://ccydp.kr/" class="culture-btn" target="_blank">문화도시영등포 홈페이지</a>
-
-                <a href="https://www.instagram.com/cultural_city_ydp/" class="culture-sns-btn ml-20p" target="_blank"
-                    >문화도시영등포 SNS</a
-                >
-            </div>
+      <div class="text-center mobile-left">
+        <div class="line-txt mt-44p nanum-barun">
+          영등포의 다채로운 도시자원과 문화의 경계를 연결합니다.
         </div>
+        <div class="line-txt mt-5p nanum-barun">
+          이주와 이동의 도시를 넘어 우정과 환대의 도시가 될 수 있도록 40만
+          이웃의 삶의 이야기를 경청합니다.
+        </div>
+        <div class="line-txt mt-5p nanum-barun">
+          행동하는 창조적 공유지를 위한 문화도시를 시민과 함께 만들어 갑니다.<br /><br />
+        </div>
+      </div>
 
-        <script th:inline="javascript">
-            document.querySelector('img[src="./images/k2.jpg"]').addEventListener('click', function () {
-                window.location.href =
-                    'https://www.songpa.go.kr/culture/detailInfo.do?resrceCd=TR0147-1000053&sc1=TR0147&rcpp=6&key=3822';
-                console.log('이미지가 클릭되었습니다.');
-            });
+      <div class="culture-btn-wrap mt-50p">
+        <a href="https://ccydp.kr/" class="culture-btn" target="_blank"
+          >문화도시영등포 홈페이지</a
+        >
 
-            $(function () {
-                $('.slider').bxSlider({
-                    mode: 'fade',
-                    captions: true,
-                    slideWidth: 200,
-                    auto: true,
-                    pause: 3000,
-                });
-            });
-        </script>
-    </body>
+        <a
+          href="https://www.instagram.com/cultural_city_ydp/"
+          class="culture-sns-btn ml-20p"
+          target="_blank"
+          >문화도시영등포 SNS</a
+        >
+      </div>
+    </div>
+
+    <script th:inline="javascript">
+      document
+        .querySelector(".slide_img_1")
+        .addEventListener("click", function () {
+          window.location.href =
+            "https://www.timessquare.co.kr/?controller=main";
+        });
+
+      $(function () {
+        $(".slider").bxSlider({
+          mode: "fade",
+          captions: true,
+          slideWidth: 200,
+          auto: true,
+          pause: 3000,
+        });
+      });
+    </script>
+  </body>
 </html>
