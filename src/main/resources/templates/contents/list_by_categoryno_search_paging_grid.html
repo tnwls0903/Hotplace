@@ -10,16 +10,15 @@
   </div>
 
   <aside class="aside_right">
-    <span th:if="${session.grade == 'admin'}">
+    <a href="javascript:location.reload();">새로고침</a>
+    <span class='menu_divide' >│</span> 
+  
+    <span th:if="${session.grade == 'admin' || session.grade == 'member'}">
       <a th:href="@{|/contents/create?categoryno=${categoryVO.categoryno}|}">등록</a>
       <span class="menu_devide">│</span>
     </span>
     
-    <a href="javascript:location.reload();">새로고침</a>
-    <span class='menu_divide' >│</span>    
     <a th:href="@{|./list_by_categoryno?categoryno=${categoryVO.categoryno}&word=${word}&now_page=${now_page}|}">목록형</a>    
-    <span class='menu_divide' >│</span>
-    <a th:href="@{|./list_by_categoryno_grid?categoryno=${categoryVO.categoryno}&word=${word }&now_page=${now_page}|}">갤러리형</a>
   </aside> 
 
   <!-- /contents/list_search_component.html 파일의 list_search_fragment import -->
@@ -27,10 +26,10 @@
      
   <div class='menu_line'></div>
        
-    <div style='width: 80%;'> <!-- 갤러리 Layout 시작 -->
+    <div style='width: 98%;'> <!-- 갤러리 Layout 시작 -->
       <div th:if="${list.size() > 0}" th:each="contentsVO, status:${list}" 
            th:attr="onclick=|location.href='/contents/read?contentsno=${contentsVO.contentsno}&word=${word}&now_page=${now_page}'|"
-           style='width: 24%; height: 200px; float: left; margin: 0.5%; padding: 0.5%; background-color: #EEEFFF; text-align: left; cursor: pointer;'>
+           style='width: 18%; height: 200px; float: left; margin: 0.5%; padding: 0.5%; background-color: #EEEFFF; text-align: left; cursor: pointer;'>
   
         <div th:if="${contentsVO.file1.endsWith('jpg') or contentsVO.file1.endsWith('png')  or contentsVO.file1.endsWith('gif')}"
               style="width: 100%; height: 120px;">
@@ -54,9 +53,9 @@
                    th:text="|${contentsVO.title}|"
                    style="font-weight: bold;"></span><br>
           
-          <span th:if="${contentsVO.content.length() > 30 }" 
-                    th:text="|${contentsVO.content.substring(0, 30) }...|"></span>
-          <span th:if="${contentsVO.content.length() <= 30 }" 
+          <span th:if="${contentsVO.content.length() > 23 }" 
+                    th:text="|${contentsVO.content.substring(0, 23) }...|"></span>
+          <span th:if="${contentsVO.content.length() <= 23 }" 
                     th:text="|${contentsVO.content}|"></span>
         </div>
         

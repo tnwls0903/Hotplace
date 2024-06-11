@@ -9,9 +9,9 @@
   </div>
   
   <aside class="aside_right">
-    <a th:href="@{|./create?categoryno=${categoryVO.categoryno}|}">등록</a>
-    <span class='menu_divide' >│</span>
     <a href="javascript:location.reload();">새로고침</a>
+    <span class='menu_divide' >│</span>
+    <a th:href="@{|./create?categoryno=${categoryVO.categoryno}|}">등록</a>
     <span class='menu_divide' >│</span>
     <a th:href="@{|./list_by_categoryno?categoryno=${categoryVO.categoryno}|}">기본 목록형</a>    
     <span class='menu_divide' >│</span>
@@ -21,7 +21,7 @@
   <div class='menu_line'></div>
   
   <form name='frm' method='post' th:object="${contentsVO}" action='./create' enctype="multipart/form-data">
-    <input type="hidden" name="categoryno" th:value="${param.categoryno }">
+    <input type="hidden" name="categoryno" th:value="${categoryVO.categoryno}">
     
     <div>
        <label>제목</label>
@@ -48,7 +48,7 @@
     </div>   
     <div class="content_body_bottom">
       <button type="submit" class="btn btn-secondary btn-sm">등록</button>
-      <button type="button" th:attr="onclick=|location.href='./list_by_categoryno_search_paging?categoryno=${categoryno}'|" class="btn btn-secondary btn-sm">목록</button>
+      <button type="button" th:attr="onclick=|location.href='./list_by_categoryno?categoryno=${contentsVO.categoryno}'|" class="btn btn-secondary btn-sm">취소</button>
     </div>
   
   </form>

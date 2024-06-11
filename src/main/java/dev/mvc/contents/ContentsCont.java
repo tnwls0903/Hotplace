@@ -90,7 +90,7 @@ public class ContentsCont {
     
     int categoryNO = contentsVO.getCategoryno(); // 카테고리 글 번호 가져오기
     
-    if (memberProc.isMemberAdmin(session)) { // 관리자로 로그인한경우
+    if (memberProc.isMember(session)) { // 관리자로 로그인한경우
       // ------------------------------------------------------------------------------
       // 파일 전송 코드 시작
       // ------------------------------------------------------------------------------
@@ -197,7 +197,7 @@ public class ContentsCont {
     ArrayList<CategoryVOMenu> menu = this.categoryProcess.menu();
     model.addAttribute("menu", menu);
     
-    if (this.memberProc.isMemberAdmin(session)) {
+    if (this.memberProc.isMember(session)) {
       ArrayList<ContentsVO> list = this.contentsProc.list_all();
       
       model.addAttribute("list", list);
@@ -491,7 +491,7 @@ public class ContentsCont {
    model.addAttribute("word", word);
    model.addAttribute("now_page", now_page);
 
-   if (this.memberProc.isMemberAdmin(session)) { // 관리자로 로그인한경우
+   if (this.memberProc.isMember(session)) { // 관리자로 로그인한경우
      ContentsVO contentsVO = this.contentsProc.read(contentsno);
      model.addAttribute("contentsVO", contentsVO); // 글 수정
      model.addAttribute("word", word);
@@ -525,7 +525,7 @@ public class ContentsCont {
    
    // System.out.println("-> word: " + contentsVO.getWord());
    
-   if (this.memberProc.isMemberAdmin(session)) { // 관리자 로그인 확인
+   if (this.memberProc.isMember(session)) { // 관리자 로그인 확인
      HashMap<String, Object> map = new HashMap<String, Object>();
      map.put("contentsno", contentsVO.getContentsno());
      map.put("passwd", contentsVO.getPasswd());
@@ -598,7 +598,7 @@ public class ContentsCont {
    model.addAttribute("word", word);
    model.addAttribute("now_page", now_page);
    
-   if (this.memberProc.isMemberAdmin(session)) {
+   if (this.memberProc.isMember(session)) {
      // 삭제할 파일 정보를 읽어옴, 기존에 등록된 레코드 저장용
      ContentsVO contentsVO_old = contentsProc.read(contentsVO.getContentsno());
      
@@ -686,7 +686,7 @@ public class ContentsCont {
    
    System.out.println("contentsno ---->>" + contentsno);
    
-   if (memberProc.isMemberAdmin(session)) { // 관리자로 로그인한경우
+   if (memberProc.isMember(session)) { // 관리자로 로그인한경우
      ContentsVO contentsVO = this.contentsProc.read(contentsno);
      model.addAttribute("contentsVO", contentsVO);
      model.addAttribute("word", word);
